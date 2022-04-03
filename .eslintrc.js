@@ -29,6 +29,13 @@ module.exports = {
         extensions: ['.js', '.tsx', '.ts'],
       },
     ],
+    'jsx-a11y/anchor-is-valid': [
+      'off',
+      {
+        components: ['Link'],
+        specialLink: ['to'],
+      },
+    ],
     'unicorn/filename-case': [
       'error',
       {

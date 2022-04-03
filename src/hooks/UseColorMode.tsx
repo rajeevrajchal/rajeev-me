@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable operator-linebreak */
 import React, { useContext, createContext, useState, useEffect } from 'react';
+import { Sun, Moon } from 'react-feather';
 
 const colorModeContext = createContext<any>({});
 const { Provider } = colorModeContext;
@@ -19,15 +22,9 @@ export const useColorMode = () => {
     }
   };
   const htmlLyout = (
-    <button
-      className="btn btn-accent btn-outline capitalize"
-      type="button"
-      onClick={changeColorMode}
-      data-theme={colorMode}
-    >
-      Color Mode:
-      <span>{colorMode}</span>
-    </button>
+    <span onClick={changeColorMode} className="cursor-pointer">
+      {colorMode === 'light' ? <Moon /> : <Sun />}
+    </span>
   );
 
   useEffect(() => {
