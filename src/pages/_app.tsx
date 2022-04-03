@@ -1,11 +1,11 @@
+import { ColorModeProvider } from '@hooks/UseColorMode';
 import '../styles/globals.css';
-import { ChakraProvider } from '@chakra-ui/react';
 
 function MyApp({ Component, pageProps }) {
   const app = (
-    <ChakraProvider>
+    <ColorModeProvider>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </ColorModeProvider>
   );
   return app;
 }

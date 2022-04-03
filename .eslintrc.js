@@ -17,8 +17,12 @@ module.exports = {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'no-use-before-define': 'off',
     'react/prop-types': 'off',
     'no-console': 'warn',
+    'import/no-unresolved': 'off',
+    'object-curly-newline': 'off',
+    'comma-dangle': 'off',
     'react/jsx-filename-extension': [
       1,
       {
@@ -28,7 +32,7 @@ module.exports = {
     'unicorn/filename-case': [
       'error',
       {
-        case: 'camelCase',
+        case: 'pascalCase',
         ignore: [
           '.eslintrc.js',
           '.prettierrc',
