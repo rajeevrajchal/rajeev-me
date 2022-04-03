@@ -17,18 +17,29 @@ module.exports = {
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'no-use-before-define': 'off',
     'react/prop-types': 'off',
     'no-console': 'warn',
+    'import/no-unresolved': 'off',
+    'object-curly-newline': 'off',
+    'comma-dangle': 'off',
     'react/jsx-filename-extension': [
       1,
       {
         extensions: ['.js', '.tsx', '.ts'],
       },
     ],
+    'jsx-a11y/anchor-is-valid': [
+      'off',
+      {
+        components: ['Link'],
+        specialLink: ['to'],
+      },
+    ],
     'unicorn/filename-case': [
       'error',
       {
-        case: 'camelCase',
+        case: 'pascalCase',
         ignore: [
           '.eslintrc.js',
           '.prettierrc',
