@@ -17,7 +17,7 @@ const Nav = (props: NavProps) => {
 
   return (
     <div
-      className="h-[10vh] flex px-8 lg:px-96 fixed top-0 left-0 w-[100%]"
+      className="h-[10vh] flex px-8 lg:px-96 fixed top-0 left-0 w-[100%] bg-base-100"
       data-theme={colorMode}
     >
       <div className="flex items-center justify-between w-full ">
