@@ -11,7 +11,7 @@ const Avatar = (props: AvatarProps) => {
   const { src, alt, width = 'w-14' } = props;
   return (
     <div className="avatar">
-      <div className={classNames('mask mask-hexagon', width)}>
+      <div className={classNames('mask mask-squircle', width)}>
         <img src={src} alt={alt} />
       </div>
     </div>

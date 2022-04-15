@@ -1,19 +1,20 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import classNames from 'classnames';
 import { useColorMode } from '@hooks/UseColorMode';
 
-type Variant = {
-  primary;
-  secondary;
-  accent;
-  ghost;
-  link;
-  info;
-  success;
-  warning;
-  error;
-};
+type Variant =
+  | 'primary'
+  | 'secondary'
+  | 'accent'
+  | 'ghost'
+  | 'link'
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'outline';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string | React.ReactElement;
@@ -27,7 +28,7 @@ const Button = (props: ButtonProps) => {
   const { label, variant = 'primary', outline, customClass } = props;
 
   const buttonClass = classNames(
-    'btn rounded-xl',
+    'btn rounded-xl tracking-wide px-8 py-2',
     outline && 'btn-outline',
     `btn-${variant}`,
     customClass
