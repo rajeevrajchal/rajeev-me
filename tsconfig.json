@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
+      "@constants/*": ["constants/*"],
       "@components/*": ["components/*"],
       "@containers/*": ["containers/*"],
       "@hooks/*": ["hooks/*"],
