@@ -36,17 +36,17 @@ module.exports = {
         specialLink: ['to'],
       },
     ],
-    'unicorn/filename-case': [
-      'error',
-      {
-        case: 'pascalCase',
-        ignore: [
-          '.eslintrc.js',
-          '.prettierrc',
-          'src/pages/index.tsx',
-          'src/pages/_app.jsx',
-        ],
-      },
-    ],
+    // 'unicorn/filename-case': [
+    //   'error',
+    //   {
+    //     case: 'pascalCase',
+    //     ignore: [
+    //       '.eslintrc.js',
+    //       '.prettierrc',
+    //       'src/pages/index.tsx',
+    //       'src/pages/_app.jsx',
+    //     ],
+    //   },
+    // ],
   },
 };

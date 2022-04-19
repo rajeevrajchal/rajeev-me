@@ -14,18 +14,22 @@ export default function Home() {
     {
       label: 'Articles',
       link: '/articles',
+      type: 'link',
     },
     {
       label: 'My Journey',
       link: '/my-journey',
+      type: 'link',
     },
     {
       label: 'Works',
       link: '/works',
+      type: 'link',
     },
     {
       label: 'Contact',
       link: '/contact',
+      type: 'button',
     },
   ];
 

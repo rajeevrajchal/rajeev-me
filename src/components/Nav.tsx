@@ -2,10 +2,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { AlignJustify } from 'react-feather';
+import Button from './Button';
 
 export type NavLink = {
   label: string;
   link: string;
+  type?: 'link' | 'button';
 };
 interface NavProps {
   menu: NavLink[];
@@ -26,20 +28,31 @@ const Nav = (props: NavProps) => {
             <a className="text-bold font-bold text-2xl ">Rajeev Rajchal</a>
           </Link>
         </div>
-        <div>
+        <div className="flex items-start gap-8">
           <ul className="menu menu-horizontal p-0 gap-4 items-center border-none hidden lg:flex">
             {menu.map((item: NavLink) => (
-              <li className="hover:bg-inherit text-lg font-bold">
-                <Link href={item.link} passHref>
-                  <a>{item.label}</a>
-                </Link>
-              </li>
+              <>
+                {item.type === 'button' ? (
+                  <Button
+                    label={item.label}
+                    outline
+                    variant="info"
+                    key={item.label}
+                  />
+                ) : (
+                  <li className="hover:bg-inherit text-lg" key={item.label}>
+                    <Link href={item.link} passHref>
+                      <a>{item.label}</a>
+                    </Link>
+                  </li>
+                )}
+              </>
             ))}
             <div className="hover:bg-none ">{customContent}</div>
           </ul>
-          <span className="cursor-pointer lg:hidden">
+          <div className="cursor-pointer lg:hidden">
             <AlignJustify />
-          </span>
+          </div>
         </div>
       </div>
     </div>
