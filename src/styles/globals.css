@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  overflow: hidden; /* Hide scrollbars */
+    font-family: 'Jost', sans-serif;
 }

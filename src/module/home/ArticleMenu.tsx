@@ -49,7 +49,10 @@ const ArticleMenu = () => (
         },
       ].map(({ id, icon, label, created }: ArticleMenuItem) => (
         <Link href={`${AppRoute.ARTICLE}/1`} key={id}>
-          <div className="flex items-start justify-start gap-4 hover:underline cursor-pointer w-full">
+          <div
+            className="flex items-start justify-start gap-4 hover:underline cursor-pointer w-full"
+            key={id}
+          >
             <div>{icon}</div>
             <div className="flex flex-col items-start -mt-1 w-full lg:max-w-[60%]">
               <h1 className="flex items-center gap-4 text-lg font-bold">

@@ -17,18 +17,22 @@ const LandingLayout = (props: LandingLayoutProps) => {
     {
       label: 'Articles',
       link: AppRoute.ARTICLES,
+      type: 'link',
     },
     {
-      label: 'My Journey',
-      link: AppRoute.JOURNEY,
+      label: 'About',
+      link: AppRoute.ABOUT,
+      type: 'link',
     },
     {
       label: 'Works',
       link: AppRoute.PROJECT,
+      type: 'link',
     },
     {
       label: 'Contact',
       link: AppRoute.CONTACT,
+      type: 'button',
     },
   ];
 

@@ -3,7 +3,7 @@ export const AppRoute = {
   HOME: '/',
   ARTICLES: '/articles',
   ARTICLE: '/article/',
-  JOURNEY: '/journey',
+  ABOUT: '/about',
   PROJECT: '/project',
   CONTACT: '/contact',
 };
