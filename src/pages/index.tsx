@@ -1,49 +1,26 @@
-import Footer from '@components/Footer';
-import Nav, { NavLink } from '@components/Nav';
 import SEOHead from '@components/SeoHead';
 import Spacer from '@components/Spacer';
-import { useColorMode } from '@hooks/UseColorMode';
+import LandingLayout from 'layouts/LandingLayout';
 import ArticleMenu from 'module/home/ArticleMenu';
 import Hero from 'module/home/Hero';
+import HomeRequest from 'module/home/HomeRequest';
 import Projects from 'module/home/Projects';
 
 export default function Home() {
-  const { htmlLyout, colorMode } = useColorMode();
-
-  const menu: NavLink[] = [
-    {
-      label: 'Articles',
-      link: '/articles',
-    },
-    {
-      label: 'My Journey',
-      link: '/my-journey',
-    },
-    {
-      label: 'Works',
-      link: '/works',
-    },
-    {
-      label: 'Contact',
-      link: '/contact',
-    },
-  ];
-
   return (
-    <div data-theme={colorMode} className="h-full w-full relative">
-      {/* page head */}
-      <SEOHead />
-      {/* items */}
-      <Nav menu={menu} customContent={htmlLyout} colorMode={colorMode} />
-      <div className="px-8 lg:px-96 h-screen w-full pt-28 overflow-y-scroll">
-        <Hero />
-        <Spacer />
-        <ArticleMenu />
-        <Spacer />
-        <Projects />
-        <Spacer />
-        <Footer />
-      </div>
-    </div>
+    <LandingLayout>
+      <>
+        <SEOHead />
+        <>
+          <Hero />
+          <Spacer />
+          <ArticleMenu />
+          <Spacer />
+          <Projects />
+          <Spacer />
+          <HomeRequest />
+        </>
+      </>
+    </LandingLayout>
   );
 }

@@ -40,12 +40,7 @@ module.exports = {
       'error',
       {
         case: 'pascalCase',
-        ignore: [
-          '.eslintrc.js',
-          '.prettierrc',
-          'src/pages/index.tsx',
-          'src/pages/_app.jsx',
-        ],
+        ignore: ['.eslintrc.js', '.prettierrc', 'src/pages/'],
       },
     ],
   },

@@ -29,8 +29,8 @@ const Button = (props: ButtonProps) => {
 
   const buttonClass = classNames(
     'btn rounded-xl tracking-wide px-8 py-2',
-    outline && 'btn-outline',
     `btn-${variant}`,
+    outline && 'btn-outline',
     customClass
   );
   return (

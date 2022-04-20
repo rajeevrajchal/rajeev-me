@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
+      "@layouts/*": ["layouts/*"],
       "@components/*": ["components/*"],
       "@containers/*": ["containers/*"],
       "@hooks/*": ["hooks/*"],
