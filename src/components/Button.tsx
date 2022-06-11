@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/require-default-props */
-import React from 'react';
 import classNames from 'classnames';
 import { useColorMode } from '@hooks/UseColorMode';
+import { ButtonHTMLAttributes, ReactElement } from 'react';
 
 type Variant =
   | 'primary'
@@ -16,8 +16,8 @@ type Variant =
   | 'error'
   | 'outline';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string | React.ReactElement;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  label: string | ReactElement;
   variant?: Variant;
   outline?: boolean;
   customClass?: string;

@@ -1,26 +1,31 @@
-import SEOHead from '@components/SeoHead';
-import Spacer from '@components/Spacer';
+import type { ReactElement } from 'react';
 import LandingLayout from 'layouts/LandingLayout';
-import ArticleMenu from 'module/home/ArticleMenu';
-import Hero from 'module/home/Hero';
-import HomeRequest from 'module/home/HomeRequest';
-import Projects from 'module/home/Projects';
+import SEOHead from '@components/SeoHead';
+import Text from '@components/Text';
+import NextLink from '@components/Link';
 
-export default function Home() {
+const Home = () => (
+  <div>
+    <Text text="Hello World" variant="h1" />
+    <Text text="Hello World" variant="h2" />
+    <Text text="Hello World" variant="h3" />
+    <Text text="Hello World" variant="h4" />
+    <Text text="Hello World" variant="h5" />
+    <Text text="Hello World" variant="h6" />
+    <Text text="Hello World" variant="p" />
+    <NextLink href="/about" label="About" />
+  </div>
+);
+
+Home.getLayout = function getLayout(page: ReactElement) {
   return (
     <LandingLayout>
       <>
         <SEOHead />
-        <>
-          <Hero />
-          <Spacer />
-          <ArticleMenu />
-          <Spacer />
-          <Projects />
-          <Spacer />
-          <HomeRequest />
-        </>
+        {page}
       </>
     </LandingLayout>
   );
-}
+};
+
+export default Home;

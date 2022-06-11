@@ -1,59 +1,22 @@
 import SEOHead from '@components/SeoHead';
-import Spacer from '@components/Spacer';
-import LandingLayout from '@layouts/LandingLayout';
+import LandingLayout from 'layouts/LandingLayout';
+import type { ReactElement } from 'react';
 
 const About = () => (
-  <LandingLayout>
-    <>
-      <SEOHead />
-      <div>
-        <Spacer />
-        <div>
-          <h1 className="text-3xl font-bold leading-4">About</h1>
-          <Spacer />
-          <div className="flex flex-col gap-8">
-            <p className="text-xl text-gray-400 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem quaerat perferendis et molestias voluptate commodi
-              neque at illo repellendus fugiat!
-            </p>
-            <p className="text-xl text-gray-400 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem quaerat perferendis et molestias voluptate commodi
-              neque at illo repellendus fugiat!
-            </p>
-            <p className="text-xl text-gray-400 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem quaerat perferendis et molestias voluptate commodi
-              neque at illo repellendus fugiat!
-            </p>
-          </div>
-        </div>
-        <Spacer />
-        <div>
-          <h1 className="text-3xl font-bold leading-4">Personal</h1>
-          <Spacer />
-          <div className="flex flex-col gap-8">
-            <p className="text-xl text-gray-400 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem quaerat perferendis et molestias voluptate commodi
-              neque at illo repellendus fugiat!
-            </p>
-            <p className="text-xl text-gray-400 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem quaerat perferendis et molestias voluptate commodi
-              neque at illo repellendus fugiat!
-            </p>
-            <p className="text-xl text-gray-400 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem quaerat perferendis et molestias voluptate commodi
-              neque at illo repellendus fugiat!
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  </LandingLayout>
+  <div>
+    <p>hello About page or rajeevme</p>
+  </div>
 );
+
+About.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <LandingLayout>
+      <>
+        <SEOHead />
+        {page}
+      </>
+    </LandingLayout>
+  );
+};
 
 export default About;
