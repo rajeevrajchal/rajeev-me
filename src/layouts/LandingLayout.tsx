@@ -1,4 +1,3 @@
-import Container from '@components/Container';
 import { useColorMode } from '@hooks/UseColorMode';
 import React from 'react';
 
@@ -12,7 +11,7 @@ const LandingLayout = (props: LandingLayoutProps) => {
 
   return (
     <div data-theme={colorMode} className="h-full w-full relative">
-      <Container>{children}</Container>
+      {children}
     </div>
   );
 };
