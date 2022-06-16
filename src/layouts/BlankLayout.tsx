@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { useColorMode } from '@hooks/UseColorMode';
-import Text from '@components/Text';
+import Text from '@components/shared/Text';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FaDiscord } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
@@ -17,7 +17,7 @@ const BlankLayout = (props: LandingLayoutProps) => {
       data-theme={colorMode}
       className="h-screen w-screen relative overflow-hidden"
     >
-      <div className="absolute top-0 left-0 w-full h-14 flex items-center justify-between px-24">
+      <div className="absolute top-0 left-0 w-full h-14 flex items-center justify-between px-6 py-8 md:px-24">
         <Text text="Rajeev R" variant="h2" customClass="text-slate-500" />
         <div className="text-slate-500 flex gap-4">
           <FaDiscord size={25} className="cursor-pointer hover:text-blue-300" />

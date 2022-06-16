@@ -1,6 +1,7 @@
-import SEOHead from '@components/SeoHead';
+import SEOHead from '@components/shared/SeoHead';
+import Text from '@components/shared/Text';
+
 import BlankLayout from '@layouts/BlankLayout';
-import Text from '@components/Text';
 
 import Image from 'next/image';
 

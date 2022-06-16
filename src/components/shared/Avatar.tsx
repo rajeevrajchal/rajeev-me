@@ -8,7 +8,7 @@ interface AvatarProps {
 }
 
 const Avatar = (props: AvatarProps) => {
-  const { src, alt, width = 'w-14' } = props;
+  const { src, alt, width = 'w-16' } = props;
   return (
     <div className="avatar">
       <div className={classNames('mask mask-squircle', width)}>

@@ -1,5 +1,5 @@
 import Text from '@components/Text';
-import NextLink from '@components/Link';
+import NextLink from '@components/shared/Link';
 
 const Demo = () => (
   <div>

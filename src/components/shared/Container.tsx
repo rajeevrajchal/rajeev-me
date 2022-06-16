@@ -1,3 +1,4 @@
+import { useColorMode } from '@hooks/UseColorMode';
 import { ReactElement } from 'react';
 
 interface ContainerProps {
@@ -5,8 +6,13 @@ interface ContainerProps {
 }
 const Container = (props: ContainerProps) => {
   const { children } = props;
+  const { colorMode } = useColorMode();
+
   return (
-    <div className="container mx-auto px-8 md:px-24 xl:px-44 2xl:px-64 h-screen w-full">
+    <div
+      className="px-6 py-8 md:px-24 xl:px-34 2xl:px-44 h-screen w-screen"
+      data-theme={colorMode}
+    >
       {children}
     </div>
   );

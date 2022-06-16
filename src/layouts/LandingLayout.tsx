@@ -1,3 +1,5 @@
+import Container from '@components/shared/Container';
+import LandingNav from '@components/LandingNav';
 import { useColorMode } from '@hooks/UseColorMode';
 import React from 'react';
 
@@ -10,8 +12,12 @@ const LandingLayout = (props: LandingLayoutProps) => {
   const { colorMode } = useColorMode();
 
   return (
-    <div data-theme={colorMode} className="h-full w-full relative">
-      {children}
+    <div
+      data-theme={colorMode}
+      className="h-full w-full overflow-hidden relative"
+    >
+      <LandingNav />
+      <Container>{children}</Container>
     </div>
   );
 };
