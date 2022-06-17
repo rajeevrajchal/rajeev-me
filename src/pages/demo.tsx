@@ -1,4 +1,4 @@
-import Text from '@components/Text';
+import Text from '@components/shared/Text';
 import NextLink from '@components/shared/Link';
 
 const Demo = () => (
