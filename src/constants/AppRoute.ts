@@ -4,4 +4,5 @@ export const AppRoute = {
   PROJECT: '/projects',
   BLOGS: '/blogs',
   LIBRARY: '/library',
+  SKILL: '/skill_graph',
 };

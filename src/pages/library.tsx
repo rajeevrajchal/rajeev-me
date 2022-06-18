@@ -8,11 +8,10 @@ Library.getLayout = function getLayout(page: ReactElement) {
   return (
     <LandingLayout>
       <>
-        <SEOHead title="All Library" description="List of library used." />
+        <SEOHead title="All Projects" description="List of projects done." />
         {page}
       </>
     </LandingLayout>
   );
 };
-
 export default Library;

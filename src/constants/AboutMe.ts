@@ -10,5 +10,6 @@ export const techs: string[] = [
   'React',
   'Express',
   'Next.Js',
+  'React Native',
   'Tailwind',
 ];
