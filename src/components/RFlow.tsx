@@ -17,7 +17,7 @@ const RFlow = ({ nodes, edges, customClass }) => (
     edges={edges}
     fitView
     fitViewOptions={fitViewOptions}
-    className={classNames(customClass)}
+    className={classNames(customClass, 'h-64')}
     snapToGrid
     snapGrid={[20, 20]}
     defaultZoom={1.5}
