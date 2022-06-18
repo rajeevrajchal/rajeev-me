@@ -78,7 +78,10 @@ const LandingNav = () => {
               </li>
             ))}
           </ul>
-          <Text text="Rajeev Rajchal" customClass="text-center" />
+          <Text
+            text="Build with love - Rajeev Rajchal"
+            customClass="text-center"
+          />
         </div>
       </ul>
     </div>

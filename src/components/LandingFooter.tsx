@@ -8,7 +8,7 @@ import { SOCIAL_LINKS, SOCIAL_LINKS_TYPE } from 'constants/SocialLink';
 
 const LandingFooter = () => (
   <div className="flex flex-col gap-2 w-full text-center py-12 relative">
-    <Text text="Build by Rajeev Rajchal" />
+    <Text text="Build with love - Rajeev Rajchal" />
     <ul className="flex justify-center items-center gap-8 ">
       {SOCIAL_LINKS.map((item: SOCIAL_LINKS_TYPE, index: number) => (
         <li key={`${item.label}-${index}`}>

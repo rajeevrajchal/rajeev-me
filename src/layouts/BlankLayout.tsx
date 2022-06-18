@@ -1,9 +1,13 @@
+/* eslint-disable react/no-array-index-key */
 import { ReactElement } from 'react';
-import { useColorMode } from '@hooks/UseColorMode';
-import Text from '@components/shared/Text';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FaDiscord } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
+import { useColorMode } from '@hooks/UseColorMode';
+import Text from '@components/shared/Text';
+import LandingFooter from '@components/LandingFooter';
+import { SOCIAL_LINKS, SOCIAL_LINKS_TYPE } from 'constants/SocialLink';
+import NextLink from '@components/shared/Link';
 
 interface LandingLayoutProps {
   children: ReactElement;
@@ -33,10 +37,24 @@ const BlankLayout = (props: LandingLayoutProps) => {
       </div>
       {children}
       <div
-        className=" w-full absolute bottom-0 left-0 h-12 text-center flex justify-center items-center"
+        className=" w-full absolute bottom-0 left-0 h-24 text-center flex flex-col gap-4 justify-center items-center"
         data-theme={colorMode}
       >
-        Copyright - 2022 - Rajeev Rajchal
+        <Text
+          text="Build with love - Rajeev Rajchal"
+          customClass="capitalize"
+        />
+        <ul className="flex justify-center items-center gap-8 md:gap-4 ">
+          {SOCIAL_LINKS.map((item: SOCIAL_LINKS_TYPE, index: number) => (
+            <li key={`${item.label}-${index}`}>
+              <NextLink
+                href={item.link}
+                icon={item.icon}
+                customClass="capitalize flex flex-col items-center gap-2"
+              />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

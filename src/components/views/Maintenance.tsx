@@ -16,7 +16,7 @@ const Maintenance = () => {
           description="Rajeev is thinking about new things to show up"
         />
         <div
-          className="h-full w-full grid place-content-center bg-slate-50 gap-8"
+          className="h-full w-full grid place-content-center  gap-8"
           data-theme={colorMode}
         >
           <Image
