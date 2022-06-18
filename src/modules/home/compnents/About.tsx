@@ -9,7 +9,7 @@ import { aboutDetail, techs } from '@utils/AboutMe';
 const About = () => (
   <div className="flex flex-col gap-2">
     <SectionTitle index="01" label="About Me" />
-    <Text text={aboutDetail} />
+    <Text text={aboutDetail} customClass="w-full text-justify md:w-4/5" />
     <div className="flex flex-col gap-3">
       <Text text="Here are a few technologies I’ve been working with recently:" />
       <div className="grid grid-cols-2 gap-2">

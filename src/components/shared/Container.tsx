@@ -10,7 +10,7 @@ const Container = (props: ContainerProps) => {
 
   return (
     <div
-      className="px-6 py-8 md:px-24 xl:px-34 2xl:px-44 h-screen w-screen"
+      className="px-6 py-8 md:px-54 xl:px-64 2xl:px-74 h-screen w-screen"
       data-theme={colorMode}
     >
       {children}

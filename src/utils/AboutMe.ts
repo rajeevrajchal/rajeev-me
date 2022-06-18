@@ -5,10 +5,10 @@ export const aboutDetail =
 
 export const techs: string[] = [
   'Javascripts (ES6+)',
-  'Node.js',
+  'Node.Js',
   'Typescripts',
   'React',
   'Express',
-  'Next',
+  'Next.Js',
   'Tailwind',
 ];

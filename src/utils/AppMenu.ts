@@ -2,7 +2,7 @@
 
 import { AppRoute } from 'constants/AppRoute';
 
-type NavLink = {
+export type NavLink = {
   label: string;
   type: string;
   link: string;
@@ -10,23 +10,18 @@ type NavLink = {
 
 export const menu: NavLink[] = [
   {
-    label: 'Articles',
-    link: AppRoute.ARTICLES,
+    label: 'Home',
+    link: AppRoute.HOME,
     type: 'link',
   },
   {
-    label: 'About',
-    link: AppRoute.ABOUT,
-    type: 'link',
-  },
-  {
-    label: 'Works',
+    label: 'Projects',
     link: AppRoute.PROJECT,
     type: 'link',
   },
   {
-    label: 'Contact',
-    link: AppRoute.CONTACT,
+    label: 'Library',
+    link: AppRoute.LIBRARY,
     type: 'button',
   },
 ];

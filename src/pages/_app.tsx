@@ -16,6 +16,8 @@ type AppPropsWithLayout = AppProps & {
 
 const IS_MAINTENANCE = process.env.NEXT_PUBLIC_IS_MAINTENANCE;
 
+console.log('IS_MAINTENANCE', IS_MAINTENANCE);
+
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
 
@@ -32,7 +34,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
     </ColorModeProvider>
   );
 
-  if (IS_MAINTENANCE) {
+  if (IS_MAINTENANCE === 'true') {
     return <Maintenance />;
   }
 

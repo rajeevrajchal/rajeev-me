@@ -5,7 +5,7 @@ const MultipleText = () => (
   <>
     <Text
       variant="p"
-      customClass="tracking-wider"
+      customClass="tracking-wider w-full text-justify md:w-4/5"
       text="I'm software developer specializing in building digital web based softwares. Currently, I'm am building simple, accessible product at"
     />
     <NextLink href="http://nextlevelvalue.nl/" label="Next Level Value" />
