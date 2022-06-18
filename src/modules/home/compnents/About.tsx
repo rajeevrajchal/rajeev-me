@@ -4,7 +4,7 @@ import { BiRightArrow } from 'react-icons/bi';
 import SectionTitle from '@components/shared/SectionTitle';
 import Text from '@components/shared/Text';
 
-import { aboutDetail, techs } from '@utils/AboutMe';
+import { aboutDetail, techs } from 'constants/AboutMe';
 
 const About = () => (
   <div className="flex flex-col gap-2">
