@@ -1,7 +1,11 @@
 /* eslint-disable consistent-return */
 import classNames from 'classnames';
 import React from 'react';
-import ReactFlow, { FitViewOptions } from 'react-flow-renderer';
+import ReactFlow, {
+  Controls,
+  FitViewOptions,
+  MiniMap,
+} from 'react-flow-renderer';
 
 const fitViewOptions: FitViewOptions = {
   maxZoom: 1,
@@ -17,7 +21,10 @@ const RFlow = ({ nodes, edges, customClass }) => (
     snapToGrid
     snapGrid={[20, 20]}
     defaultZoom={1.5}
-  />
+  >
+    <MiniMap className="h-20 w-20 rounded-md" />
+    <Controls className="bg-white rounded-sm" />
+  </ReactFlow>
 );
 
 export default RFlow;

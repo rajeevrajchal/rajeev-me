@@ -151,7 +151,7 @@ const list: ListNode[] = [
     ],
     initialEdges: [
       {
-        id: 'f-1',
+        id: 'ui-1',
         source: '1',
         target: '2',
         animated: false,
@@ -159,7 +159,7 @@ const list: ListNode[] = [
         label: 'Intermediate',
       },
       {
-        id: 'f-1',
+        id: 'ui-2',
         source: '1',
         target: '3',
         animated: false,
@@ -167,7 +167,7 @@ const list: ListNode[] = [
         label: 'Intermediate',
       },
       {
-        id: 'f-1',
+        id: 'ui-3',
         source: '1',
         target: '4',
         animated: false,
@@ -280,7 +280,7 @@ const list: ListNode[] = [
     ],
     initialEdges: [
       {
-        id: 'f-1',
+        id: 'd-1',
         source: '1',
         target: '2',
         animated: false,
@@ -288,7 +288,7 @@ const list: ListNode[] = [
         label: 'Intermediate',
       },
       {
-        id: 'f-1',
+        id: 'd-2',
         source: '1',
         target: '3',
         animated: false,
@@ -296,7 +296,7 @@ const list: ListNode[] = [
         label: 'Intermediate',
       },
       {
-        id: 'f-1',
+        id: 'd-3',
         source: '1',
         target: '4',
         animated: false,
@@ -310,7 +310,7 @@ const list: ListNode[] = [
 const ListFlow = () => (
   <div className="flex flex-col ">
     {list.map((listItem: ListNode) => (
-      <div>
+      <div key={listItem.label}>
         <SectionTitle label={listItem.label} noLine />
         <RFlow
           nodes={listItem.initialNodes}
