@@ -24,27 +24,27 @@ export type SOCIAL_LINKS_TYPE = {
 export const SOCIAL_LINKS: SOCIAL_LINKS_TYPE[] = [
   {
     label: 'Github',
-    icon: <AiFillGithub />,
+    icon: <AiFillGithub size={22} />,
     link: GITHUB,
   },
   {
     label: 'Twitter',
-    icon: <AiFillLinkedin />,
+    icon: <AiFillLinkedin size={22} />,
     link: TWITTER,
   },
   {
     label: 'LinkedIn',
-    icon: <AiFillTwitterCircle />,
+    icon: <AiFillTwitterCircle size={22} />,
     link: LINKEDIN,
   },
   {
     label: 'Instagram',
-    icon: <AiFillInstagram />,
+    icon: <AiFillInstagram size={22} />,
     link: INSTAGRAM,
   },
   {
     label: 'Upwork',
-    icon: <SiUpwork />,
+    icon: <SiUpwork size={22} />,
     link: UPWORK,
   },
 ];

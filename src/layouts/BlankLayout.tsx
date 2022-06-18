@@ -5,9 +5,9 @@ import { FaDiscord } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
 import { useColorMode } from '@hooks/UseColorMode';
 import Text from '@components/shared/Text';
-import LandingFooter from '@components/LandingFooter';
 import { SOCIAL_LINKS, SOCIAL_LINKS_TYPE } from 'constants/SocialLink';
 import NextLink from '@components/shared/Link';
+import Logo from '@components/Logo';
 
 interface LandingLayoutProps {
   children: ReactElement;
@@ -22,10 +22,10 @@ const BlankLayout = (props: LandingLayoutProps) => {
       className="h-screen w-screen relative overflow-hidden"
     >
       <div
-        className="absolute top-0 left-0 w-full h-14 flex items-center justify-between px-6 py-8 md:px-24"
+        className="absolute top-3 left-0 w-full h-14 flex items-center justify-between px-6 py-8 md:px-54 xl:px-64 2xl:px-74 "
         data-theme={colorMode}
       >
-        <Text text="Rajeev R" variant="h2" customClass="text-slate-500" />
+        <NextLink href="/" label={<Logo />} />
         <div className="text-slate-500 flex gap-4">
           <FaDiscord size={25} className="cursor-pointer hover:text-blue-300" />
           <BsGithub size={20} className="cursor-pointer hover:text-blue-200" />
