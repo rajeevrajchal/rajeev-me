@@ -21,7 +21,7 @@ const Maintenance = () => (
         />
         <div className="flex flex-col gap-4 justify-center items-center">
           <Text
-            text="This page is underdevelopment"
+            text="This page is on development"
             variant="h3"
             customClass="leading-6 text-center text-slate-500"
           />
@@ -33,7 +33,7 @@ const Maintenance = () => (
             Currently he is building something different for you
         "
             variant="p"
-            customClass="leading-6 text-center text-slate-500 w-3/5 "
+            customClass="leading-6 text-justify text-slate-500 w-4/5 md:w-2/5 "
           />
         </div>
       </div>

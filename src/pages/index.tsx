@@ -2,17 +2,16 @@ import type { ReactElement } from 'react';
 import LandingLayout from 'layouts/LandingLayout';
 import SEOHead from '@components/shared/SeoHead';
 import Spacer from '@components/shared/Spacer';
-import About from 'modules/home/About';
-import Banner from 'modules/home/Banner';
-import WhereWork from 'modules/home/WhereWork';
+import About from '@modules/home/compnents/About';
+import Banner from '@modules/home/compnents/Banner';
+import WhereWork from '@modules/home/compnents/WhereWork';
 
 const Home = () => (
   <>
-    <Spacer />
     <Banner />
-    <Spacer />
+    <Spacer size="xl" />
     <About />
-    <Spacer />
+    <Spacer size="xl" />
     <WhereWork />
   </>
 );

@@ -14,10 +14,10 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
+const IS_MAINTENANCE = process.env.NEXT_PUBLIC_IS_MAINTENANCE;
+
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
-  const DEPLOYMENT_ENV = process.env.NEXT_PUBLIC_DEPLOYMENT_TYPE;
-  console.log('isMaintenance', DEPLOYMENT_ENV);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -32,7 +32,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
     </ColorModeProvider>
   );
 
-  if (DEPLOYMENT_ENV === 'maintenance') {
+  if (IS_MAINTENANCE) {
     return <Maintenance />;
   }
 
