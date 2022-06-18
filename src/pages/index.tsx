@@ -5,6 +5,7 @@ import Spacer from '@components/shared/Spacer';
 import About from '@modules/home/compnents/About';
 import Banner from '@modules/home/compnents/Banner';
 import WhereWork from '@modules/home/compnents/WhereWork';
+import Contact from '@modules/home/compnents/Contact';
 
 const Home = () => (
   <>
@@ -13,6 +14,8 @@ const Home = () => (
     <About />
     <Spacer size="xl" />
     <WhereWork />
+    <Spacer size="xl" />
+    <Contact />
   </>
 );
 

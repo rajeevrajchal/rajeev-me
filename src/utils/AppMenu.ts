@@ -14,11 +14,11 @@ export const menu: NavLink[] = [
     link: AppRoute.HOME,
     type: 'link',
   },
-  {
-    label: 'Projects',
-    link: AppRoute.PROJECT,
-    type: 'link',
-  },
+  // {
+  //   label: 'Projects',
+  //   link: AppRoute.PROJECT,
+  //   type: 'link',
+  // },
   {
     label: 'Library',
     link: AppRoute.LIBRARY,
