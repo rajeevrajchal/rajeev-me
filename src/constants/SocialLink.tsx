@@ -14,6 +14,8 @@ export const TWITTER = 'https://twitter.com/rajeevrajchal';
 export const UPWORK = 'https://www.upwork.com/freelancers/~01f0978587bed2e79c';
 export const NLV = 'http://nextlevelvalue.nl';
 export const TT = 'https://www.trainingtube.com';
+export const GROWTHZILLA = 'https://growthzilla.com/';
+export const ITG = 'https://www.itglance.net/';
 
 export type SOCIAL_LINKS_TYPE = {
   label: string;

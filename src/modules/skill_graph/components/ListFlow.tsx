@@ -22,43 +22,43 @@ const list: ListNode[] = [
       {
         id: '2',
         data: { label: 'React' },
-        position: { x: -200, y: 85 },
+        position: { x: -200, y: 150 },
         type: 'output',
       },
       {
         id: '3',
         data: { label: 'Next JS', color: 'red' },
-        position: { x: 0, y: 100 },
+        position: { x: 0, y: 150 },
         type: 'output',
       },
       {
         id: '4',
         data: { label: 'Gatsby' },
-        position: { x: 200, y: 85 },
+        position: { x: 200, y: 150 },
         type: 'output',
       },
       {
         id: '5',
         data: { label: 'HTML' },
-        position: { x: -200, y: -75 },
+        position: { x: -200, y: -150 },
         type: 'output',
       },
       {
         id: '6',
         data: { label: 'CSS' },
-        position: { x: 0, y: -75 },
+        position: { x: 0, y: -150 },
         type: 'output',
       },
       {
         id: '7',
         data: { label: 'JS' },
-        position: { x: 200, y: -75 },
+        position: { x: 200, y: -150 },
         type: 'output',
       },
       {
         id: '8',
         data: { label: 'React Native' },
-        position: { x: 250, y: 0 },
+        position: { x: 250, y: 50 },
         type: 'output',
       },
     ],
@@ -308,14 +308,16 @@ const list: ListNode[] = [
 ];
 
 const ListFlow = () => (
-  <div className="flex flex-col ">
+  <div className="flex flex-col gap-24 md:gap-16 ">
     {list.map((listItem: ListNode) => (
-      <div key={listItem.label} className="flex flex-col gap-2">
+      <div key={listItem.label} className="flex flex-col  gap-2">
         <SectionTitle label={listItem.label} noLine />
         <RFlow
           nodes={listItem.initialNodes}
           edges={listItem.initialEdges}
-          customClass="h-64"
+          style={{
+            height: listItem.label === 'Frontend' ? '30rem' : '20rem',
+          }}
         />
       </div>
     ))}

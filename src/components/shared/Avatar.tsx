@@ -6,14 +6,15 @@ interface AvatarProps {
   alt: string;
   width?: string;
   customClass?: string;
+  imageClass?: string;
 }
 
 const Avatar = (props: AvatarProps) => {
-  const { src, alt, width = 'w-16', customClass } = props;
+  const { src, alt, width = 'w-16', customClass, imageClass } = props;
   return (
     <div className={classNames('avatar', customClass)}>
-      <div className={classNames('mask mask-squircle', width)}>
-        <img src={src} alt={alt} />
+      <div className={classNames('mask mask-squircle', width, imageClass)}>
+        <img src={src} alt={alt} className={imageClass} />
       </div>
     </div>
   );

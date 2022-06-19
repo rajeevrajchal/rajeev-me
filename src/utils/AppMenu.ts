@@ -20,7 +20,7 @@ export const menu: NavLink[] = [
   //   type: 'link',
   // },
   {
-    label: 'Skill Graph',
+    label: 'Skill',
     link: AppRoute.SKILL,
     type: 'link',
   },
