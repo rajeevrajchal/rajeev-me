@@ -13,7 +13,10 @@ const LandingLayout = (props: LandingLayoutProps) => {
   const { colorMode } = useColorMode();
 
   return (
-    <div data-theme={colorMode} className="h-screen w-screen relative">
+    <div
+      data-theme={colorMode}
+      className="h-screen w-screen relative overflow-x-hidden"
+    >
       <LandingNav />
       <Container>
         <>

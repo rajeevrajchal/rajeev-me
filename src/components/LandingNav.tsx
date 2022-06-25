@@ -24,7 +24,7 @@ const LandingNav = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <div className="px-6 md:px-54 xl:px-64 2xl:px-74 py-2 flex items-center justify-between  overflow-hidden">
+    <div className="px-6 md:px-54 xl:px-64 2xl:px-[30rem] py-2 flex items-center justify-between  overflow-hidden">
       <div
         onClick={() => router.push(AppRoute.HOME)}
         className="cursor-pointer"

@@ -19,11 +19,11 @@ export const menu: NavLink[] = [
   //   link: AppRoute.PROJECT,
   //   type: 'link',
   // },
-  {
-    label: 'Skill',
-    link: AppRoute.SKILL,
-    type: 'link',
-  },
+  // {
+  //   label: 'Skill',
+  //   link: AppRoute.SKILL,
+  //   type: 'link',
+  // },
   {
     label: 'Library',
     link: AppRoute.LIBRARY,
