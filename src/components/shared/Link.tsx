@@ -19,10 +19,19 @@ interface NextLinkProps extends PropsWithChildren<LinkProps> {
   icon?: ReactNode;
   // eslint-disable-next-line react/require-default-props
   customClass?: string;
+  external?: boolean;
 }
 
 const NextLink = (props: NextLinkProps) => {
-  const { href, label, customClass, active, icon, ...rest } = props;
+  const {
+    href,
+    label,
+    customClass,
+    active,
+    icon,
+    external = false,
+    ...rest
+  } = props;
   const linkClass = classNames(
     'leading-6 font-medium focus:outline-none focus:text-[#4e85ff] transition ease-in-out duration-150',
     customClass,
@@ -30,7 +39,7 @@ const NextLink = (props: NextLinkProps) => {
   );
   return (
     <Link href={href} passHref>
-      <a {...rest} className={linkClass}>
+      <a {...rest} className={linkClass} target={external ? '_blank' : '_self'}>
         {icon && <span>{icon}</span>}
         {label && <span>{label}</span>}
       </a>

@@ -7,7 +7,7 @@ import { useColorMode } from '@hooks/UseColorMode';
 type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
 interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
-  text: string | React.ReactElement;
+  text: string | number | React.ReactElement;
   variant?: Variant;
   customClass?: string;
 }

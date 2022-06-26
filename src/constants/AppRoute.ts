@@ -2,7 +2,7 @@
 export const AppRoute = {
   HOME: '/',
   PROJECT: '/projects',
-  BLOGS: '/blogs',
+  BLOGS: '/blog',
   LIBRARY: '/library',
   SKILL: '/skill_graph',
 };

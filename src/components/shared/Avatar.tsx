@@ -7,13 +7,22 @@ interface AvatarProps {
   width?: string;
   customClass?: string;
   imageClass?: string;
+  title?: string;
 }
 
 const Avatar = (props: AvatarProps) => {
-  const { src, alt, width = 'w-16', customClass, imageClass } = props;
+  const { src, alt, width = 'w-16', customClass, imageClass, title } = props;
   return (
-    <div className={classNames('avatar', customClass)}>
-      <div className={classNames('mask mask-squircle', width, imageClass)}>
+    <div
+      className={classNames('avatar online', customClass)}
+      title={title || 'Happy to see you there.! 🤗'}
+    >
+      <div
+        className={classNames(
+          `mask mask-hexagon bg-gray-600 w-16 md:${width}`,
+          imageClass
+        )}
+      >
         <img src={src} alt={alt} className={imageClass} />
       </div>
     </div>

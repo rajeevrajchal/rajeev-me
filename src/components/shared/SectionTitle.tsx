@@ -16,7 +16,7 @@ const SectionTitle = (props: SectionTitleProps) => {
         <Text
           text={`${index}. ${label}`}
           variant="h4"
-          customClass={classNames('text-[#4e85ff]', customClass)}
+          customClass={classNames('text-[#4e85ff] md:w-64', customClass)}
         />
       )}
 

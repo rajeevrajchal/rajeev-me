@@ -10,8 +10,8 @@ const MultipleText = () => (
       text="I'm software developer specializing in building digital web based softwares. Currently, I'm am building simple, accessible product at: "
     />
     <div className="flex flex-col gap-1 md:gap-0">
-      <NextLink href={NLV} label="Next Level Value" />
-      <NextLink href={UPWORK} label="Upwork" />
+      <NextLink href={NLV} label="Next Level Value" external />
+      <NextLink href={UPWORK} label="Upwork" external />
     </div>
   </div>
 );

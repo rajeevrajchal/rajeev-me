@@ -4,7 +4,7 @@ import { NLV, TT, GROWTHZILLA, ITG } from 'constants/SocialLink';
 export type DeckCard = {
   image?: string;
   title: string;
-  [key: string]: string;
+  [key: string]: string | number;
 };
 
 export const aboutDetail =  "Hello, I'm Rajeev and I enjoy creating things that live on the internet. I am more focued building web application as well as mobile application that server meanfull purpose to the user out world !";
@@ -22,6 +22,8 @@ export const techs: string[] = [
 
 export const workDock: DeckCard[] = [
   {
+    id: 1,
+    order: 4,
     title: 'IT Glance',
     subtitle: 'FullStack Software Developer',
     link: ITG,
@@ -31,6 +33,8 @@ export const workDock: DeckCard[] = [
     endDate: 'Mar 2021',
   },
   {
+    id: 2,
+    order: 3,
     title: 'Growthzilla',
     subtitle: 'Software Engineer',
     image: 'https://growthzilla.com/img/growthzilla-logo.png',
@@ -41,6 +45,8 @@ export const workDock: DeckCard[] = [
     endDate: 'Feb 2022',
   },
   {
+    id: 3,
+    order: 2,
     title: 'Training Tube',
     subtitle: 'Freelance Front-End Developer',
     link: TT,
@@ -50,6 +56,8 @@ export const workDock: DeckCard[] = [
     endDate: 'Present',
   },
   {
+    id: 4,
+    order: 1,
     title: 'Next Level Value',
     subtitle: 'Software Developer',
     image: 'https://nlv-website.s3.eu-west-1.amazonaws.com/logo_b5bb8ba43d.png',
