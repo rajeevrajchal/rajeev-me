@@ -13,6 +13,7 @@ const LandingFooter = () => (
       {SOCIAL_LINKS.map((item: SOCIAL_LINKS_TYPE, index: number) => (
         <li key={`${item.label}-${index}`}>
           <NextLink
+            external
             href={item.link}
             icon={item.icon}
             customClass="capitalize flex flex-col items-center gap-2"

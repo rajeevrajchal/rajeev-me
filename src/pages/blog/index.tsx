@@ -1,9 +1,11 @@
 import { ReactElement } from 'react';
 
 import LandingLayout from '@layouts/LandingLayout';
-import SEOHead from '@components/shared/SeoHead';
 
-const Blog = () => <div>Blog</div>;
+import SEOHead from '@components/shared/SeoHead';
+import ComingSoon from '@components/views/ComingSoon';
+
+const Blog = () => <ComingSoon />;
 
 Blog.getLayout = function getLayout(page: ReactElement) {
   return (

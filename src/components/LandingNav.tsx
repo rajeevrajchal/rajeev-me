@@ -50,7 +50,7 @@ const LandingNav = () => {
       </>
       <ul
         className={classNames(
-          'absolute md:relative top-20 md:top-0 left-0 z-50 bg-[#43526e] md:bg-transparent w-full h-full flex-col md:flex-row  sm:gap-7 p-12 md:p-0 gap-12 md:justify-end md:flex',
+          'absolute md:relative top-20 md:top-0 left-0 z-50 bg-[#2a303c] md:bg-transparent w-full h-full flex-col md:flex-row  sm:gap-7 p-12 md:p-0 gap-12 md:justify-end md:flex',
           openMenu ? 'flex md:flex' : 'hidden'
         )}
       >
@@ -70,6 +70,7 @@ const LandingNav = () => {
             {SOCIAL_LINKS.map((item: SOCIAL_LINKS_TYPE, index: number) => (
               <li key={`${item.label}-${index}`}>
                 <NextLink
+                  external
                   href={item.link}
                   label={item.label}
                   icon={item.icon}
