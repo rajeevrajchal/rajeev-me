@@ -16,7 +16,10 @@ const About = () => (
           <Text text="Here are a few technologies I’ve been working with recently:" />
           <div className="grid grid-cols-2 gap-2">
             {techs.map((item: string, index: number) => (
-              <div className="flex items-center gap-2" key={`${item}-${index}`}>
+              <div
+                className="flex items-center gap-2 cursor-default"
+                key={`${item}-${index}`}
+              >
                 <BiRightArrow />
                 <Text text={item} />
               </div>

@@ -31,12 +31,12 @@ export const SOCIAL_LINKS: SOCIAL_LINKS_TYPE[] = [
   },
   {
     label: 'Twitter',
-    icon: <AiFillLinkedin size={22} />,
+    icon: <AiFillTwitterCircle size={22} />,
     link: TWITTER,
   },
   {
     label: 'LinkedIn',
-    icon: <AiFillTwitterCircle size={22} />,
+    icon: <AiFillLinkedin size={22} />,
     link: LINKEDIN,
   },
   {

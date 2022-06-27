@@ -11,7 +11,7 @@ const LandingFooter = () => (
     <Text text="Build with love - Rajeev Rajchal" />
     <ul className="flex justify-center items-center gap-8 ">
       {SOCIAL_LINKS.map((item: SOCIAL_LINKS_TYPE, index: number) => (
-        <li key={`${item.label}-${index}`}>
+        <li key={`${item.label}-${index}`} title={item.label}>
           <NextLink
             external
             href={item.link}

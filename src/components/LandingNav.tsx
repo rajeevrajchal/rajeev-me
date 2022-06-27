@@ -55,7 +55,11 @@ const LandingNav = () => {
         )}
       >
         {menu.map((nav: NavLink) => (
-          <li onClick={() => setOpenMenu(false)} key={nav.label}>
+          <li
+            onClick={() => setOpenMenu(false)}
+            key={nav.label}
+            title={nav.title}
+          >
             <NextLink
               href={nav.link}
               label={nav.label}
