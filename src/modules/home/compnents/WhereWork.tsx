@@ -25,7 +25,7 @@ const WhereWork = () => {
               className={classNames(
                 'w-full -ml-[2px] text-left flex justify-start py-2 rounded-tr-md rounded-br-md cursor-pointer hover:bg-[#4e85ff]/25 hover:border-l-2 hover:border-[#4e85ff]',
                 activeTab.id === work.id &&
-                  'border-l-2 border-[#4e85ff] bg-[#4e85ff]/25'
+                  'border-l-2 border-[#4e85ff] text-[#4e85ff]'
               )}
             >
               <div className="ml-6">
