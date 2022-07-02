@@ -6,6 +6,7 @@ import About from '@modules/home/compnents/About';
 import Banner from '@modules/home/compnents/Banner';
 import WhereWork from '@modules/home/compnents/WhereWork';
 import Contact from '@modules/home/compnents/Contact';
+import Learning from '@modules/home/compnents/Learning';
 // import Projects from '@modules/home/compnents/Projects';
 
 const Home = () => (
@@ -14,9 +15,9 @@ const Home = () => (
     <Spacer size="xl" />
     <About />
     <Spacer size="xl" />
+    <Learning />
+    <Spacer size="xl" />
     <WhereWork />
-    {/* <Spacer size="xl" />
-    <Projects /> */}
     <Spacer size="xl" />
     <Contact />
   </>

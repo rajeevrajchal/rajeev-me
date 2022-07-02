@@ -20,6 +20,12 @@ export const techs: string[] = [
   'Tailwind',
 ];
 
+export const interestFields: string[] = [
+  'Software Architecure',
+  'Web3',
+  'Blockchain',
+];
+
 export const workDock: DeckCard[] = [
   {
     id: 1,
@@ -59,7 +65,7 @@ export const workDock: DeckCard[] = [
     id: 4,
     order: 1,
     title: 'Next Level Value',
-    subtitle: 'Software Developer',
+    subtitle: 'FullStack Software Developer',
     image: 'https://nlv-website.s3.eu-west-1.amazonaws.com/logo_b5bb8ba43d.png',
     link: NLV,
     description:

@@ -7,7 +7,12 @@ const MultipleText = () => (
     <Text
       variant="p"
       customClass="tracking-wider w-full text-justify md:w-4/5"
-      text="I'm software developer specializing in building digital web based softwares. Currently, I'm am building simple, accessible product at: "
+      text="I'm software developer, specializing in building digital web based softwares. Currently, I'm am building simple, accessible product at: "
+    />
+    <Text
+      text="Goal to pursue a career as Software Architecure And be a family man."
+      variant="p"
+      customClass="tracking-wider w-full text-justify md:w-4/5"
     />
     <div className="flex flex-col gap-1 md:gap-0">
       <NextLink href={NLV} label="Next Level Value" external />
@@ -20,7 +25,11 @@ const Banner = () => (
   <div className="flex flex-col gap-3">
     <Text text="Namaste, I'm" variant="h3" customClass="text-[#4e85ff]" />
     <Text text="Rajeev Rajchal," variant="h1" customClass="text-white" />
-    <Text text="software developer" variant="h3" customClass="capitalize" />
+    <Text
+      text="Fullstack software developer"
+      variant="h3"
+      customClass="capitalize"
+    />
     <Text text={<MultipleText />} variant="p" />
   </div>
 );
