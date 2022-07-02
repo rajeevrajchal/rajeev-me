@@ -30,7 +30,7 @@ const About = () => (
 
       <div className="md:w-1/4  flex justify-center items-center ">
         <img
-          src="/images/logo.jpg"
+          src="https://media-exp2.licdn.com/dms/image/C5603AQGnEbqJFNsdvQ/profile-displayphoto-shrink_400_400/0/1650351249447?e=1661990400&v=beta&t=P2PHJcxB3W1VNn2lVhJ9eXk1v7wJV8gDRTQpQuGY7L8"
           alt=""
           className="md:w-full w-2/3 mask mask-hexagon "
         />
