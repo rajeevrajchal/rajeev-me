@@ -27,6 +27,7 @@ const About = () => (
           </div>
         </div>
       </div>
+
       <div className="md:w-1/4  flex justify-center items-center ">
         <img
           src="/images/logo.jpg"
