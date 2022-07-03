@@ -311,7 +311,7 @@ const ListFlow = () => (
   <div className="flex flex-col gap-24 md:gap-16 ">
     {list.map((listItem: ListNode) => (
       <div key={listItem.label} className="flex flex-col  gap-2">
-        <SectionTitle label={listItem.label} noLine />
+        <SectionTitle label={listItem.label} />
         <RFlow
           nodes={listItem.initialNodes}
           edges={listItem.initialEdges}
