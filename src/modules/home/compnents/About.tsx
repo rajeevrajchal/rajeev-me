@@ -13,7 +13,10 @@ const About = () => (
       <div className="md:w-3/4 ">
         <Text text={aboutDetail} customClass="w-full text-justify md:w-4/5" />
         <div className="flex flex-col gap-3">
-          <Text text="Here are a few technologies I’ve been working with recently:" />
+          <Text
+            text="Here are a few technologies I’ve been working with recently:"
+            customClass="text-[#4e85ff] mt-4"
+          />
           <div className="grid grid-cols-2 gap-2">
             {techs.map((item: string, index: number) => (
               <div
@@ -39,7 +42,7 @@ const About = () => (
 
     <div className="md:w-3/4">
       <div className="flex flex-col gap-3">
-        <Text text="Fields of intereset" />
+        <Text text="Fields of intereset" customClass="text-[#4e85ff]" />
         <div className="grid grid-cols-2 gap-2">
           {interestFields.map((item: string, index: number) => (
             <div
