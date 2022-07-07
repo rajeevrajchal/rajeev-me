@@ -7,7 +7,8 @@ export type DeckCard = {
   [key: string]: string | number;
 };
 
-export const aboutDetail =  "Hello, I'm Rajeev and I enjoy creating things that live on the internet. I am more focued building web application as well as mobile application that server meanfull purpose to the user out world !";
+export const aboutDetail =
+  "Hello, I'm Rajeev and I enjoy creating things that live on the internet. I am more focued building web application as well as mobile application that server meanfull purpose to the user out world !";
 
 export const techs: string[] = [
   'Javascripts (ES6+)',
@@ -23,6 +24,13 @@ export const techs: string[] = [
 export const interestFields: string[] = [
   'Software Architecure',
   'Web3',
+  'Blockchain',
+];
+
+export const techLearning: string[] = [
+  'Improving my skills in React',
+  'Monorepo Concept',
+  'Turborepo Concept',
   'Blockchain',
 ];
 

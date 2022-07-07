@@ -15,7 +15,7 @@ const Custom404 = () => (
       customClass="text-center"
     />
     <Text
-      text="Hold my hand I will guide you through."
+      text="Hold up, let me guide you through."
       variant="h4"
       customClass="text-center"
     />

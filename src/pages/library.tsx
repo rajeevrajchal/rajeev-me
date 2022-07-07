@@ -1,4 +1,5 @@
 import SEOHead from '@components/shared/SeoHead';
+import Text from '@components/shared/Text';
 import LandingLayout from '@layouts/LandingLayout';
 import LibraryCard from '@modules/library/LibraryCard';
 
@@ -38,14 +39,15 @@ const libries = [
       'NativeBase is an accessible, utility-first component library that helps you build consistent UI across Android, iOS and Web.',
   },
   {
-    title: 'MUI / Material UI',
-    logo: 'https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png',
+    title: 'React',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
     metaDesc:
-      'MUI offers a comprehensive suite of UI tools to help you ship new features faster. Start with Material UI, our fully-loaded component library, or bring your own design system to our production-ready components.',
+      'React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.',
   },
 ];
 const Library = () => (
-  <div>
+  <div className="flex flex-col gap-4">
+    <Text text="Libraries I am comfortable with" variant="h3" />
     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
       {libries.map((item) => (
         <div key={item.title}>

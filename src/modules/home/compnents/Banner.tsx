@@ -7,7 +7,7 @@ const MultipleText = () => (
     <Text
       variant="p"
       customClass="tracking-wider w-full text-justify md:w-4/5"
-      text="I'm software developer, specializing in building digital web based softwares. Currently, I'm am building simple, accessible product at: "
+      text="Fullstack Software developer, specializing in building digital web based softwares. Currently, I'm building simple, accessible product at: "
     />
     <Text
       text="Goal to pursue a career as Software Architecure And be a family man."
@@ -23,8 +23,8 @@ const MultipleText = () => (
 
 const Banner = () => (
   <div className="flex flex-col gap-3">
-    <Text text="Namaste, I'm" variant="h3" customClass="text-[#4e85ff]" />
-    <Text text="Rajeev Rajchal," variant="h1" customClass="text-white" />
+    <Text text="Hello there, I'm " variant="h3" customClass="text-[#4e85ff]" />
+    <Text text="Rajeev Rajchal," variant="h1" />
     <Text
       text="Fullstack software developer"
       variant="h3"
