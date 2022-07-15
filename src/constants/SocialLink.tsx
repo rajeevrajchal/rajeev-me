@@ -9,7 +9,7 @@ import { SiUpwork } from 'react-icons/si';
 
 export const GITHUB = 'https://github.com/rajeevrajchal';
 export const LINKEDIN = 'https://www.linkedin.com/in/rajeevrajchal';
-export const INSTAGRAM = 'https://www.instagram.com/rajeevrajchal';
+export const INSTAGRAM = 'https://www.instagram.com/rajeev.rajchal';
 export const TWITTER = 'https://twitter.com/rajeevrajchal';
 export const UPWORK = 'https://www.upwork.com/freelancers/~01f0978587bed2e79c';
 export const NLV = 'http://nextlevelvalue.nl';
