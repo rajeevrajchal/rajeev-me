@@ -6,7 +6,7 @@ import { BiRightArrow } from 'react-icons/bi';
 
 const Learning = () => (
   <div className="flex flex-col gap-4">
-    <SectionTitle index="03" label="Currently Learning" />
+    <SectionTitle index="02" label="Currently Learning" />
     <div className="flex flex-col gap-3">
       <Text
         text="Even I a not learning new thing, I usaually working to level up my skill with research on various aspect"

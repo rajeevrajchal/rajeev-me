@@ -15,7 +15,7 @@ const WhereWork = () => {
   );
   return (
     <div className="flex flex-col gap-4">
-      <SectionTitle index="02" label="Work Places" />
+      <SectionTitle index="04" label="Work Places" />
       <div className="flex flex-col md:flex-row gap-8 w-full">
         <div className="md:w-1/5 flex flex-col md:border-l-2 border-gray-600 gap-4">
           {orderBy(workDock, ['order'], ['asc']).map((work: DeckCard) => (

@@ -1,3 +1,4 @@
+import SectionTitle from '@components/shared/SectionTitle';
 import SEOHead from '@components/shared/SeoHead';
 import Text from '@components/shared/Text';
 import LandingLayout from '@layouts/LandingLayout';
@@ -47,7 +48,7 @@ const libries = [
 ];
 const Library = () => (
   <div className="flex flex-col gap-4">
-    <Text text="Libraries I am comfortable with" variant="h3" />
+    <SectionTitle label="Libraries I am comfortable with." />
     <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
       {libries.map((item) => (
         <div key={item.title}>

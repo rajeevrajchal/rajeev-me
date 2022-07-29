@@ -19,12 +19,15 @@ export const techs: string[] = [
   'Next.Js',
   'React Native',
   'Tailwind',
+  'Firebase',
+  'Material UI',
 ];
 
 export const interestFields: string[] = [
   'Software Architecure',
   'Web3',
   'Blockchain',
+  'Data Science',
 ];
 
 export const techLearning: string[] = [

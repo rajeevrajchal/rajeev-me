@@ -7,6 +7,7 @@ import Banner from '@modules/home/compnents/Banner';
 import WhereWork from '@modules/home/compnents/WhereWork';
 import Contact from '@modules/home/compnents/Contact';
 import Learning from '@modules/home/compnents/Learning';
+import Academy from '@modules/home/compnents/Academy';
 // import Projects from '@modules/home/compnents/Projects';
 
 const Home = () => (
@@ -16,6 +17,8 @@ const Home = () => (
     <About />
     <Spacer size="xl" />
     <Learning />
+    <Spacer size="xl" />
+    <Academy />
     <Spacer size="xl" />
     <WhereWork />
     <Spacer size="xl" />
