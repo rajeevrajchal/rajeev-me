@@ -8,6 +8,7 @@ import Text from '@components/shared/Text';
 import { SOCIAL_LINKS, SOCIAL_LINKS_TYPE } from 'constants/SocialLink';
 import NextLink from '@components/shared/Link';
 import Logo from '@components/Logo';
+import classNames from 'classnames';
 
 interface LandingLayoutProps {
   children: ReactElement;
@@ -19,7 +20,12 @@ const BlankLayout = (props: LandingLayoutProps) => {
   return (
     <div
       data-theme={colorMode}
-      className="h-screen w-screen relative overflow-hidden"
+      className={classNames(
+        'h-screen w-screen relative overflow-x-hidden',
+        "bg-[url('/images/background.svg')]",
+        'bg-no-repeat',
+        'bg-cover'
+      )}
     >
       <div
         className="absolute top-3 left-0 w-full h-14 flex items-center justify-between px-6 py-8 md:px-54 xl:px-64 2xl:px-74 "

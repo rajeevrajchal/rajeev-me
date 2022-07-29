@@ -25,12 +25,7 @@ const LandingNav = () => {
 
   return (
     <div className="px-6 md:px-54 xl:px-64 2xl:px-[30rem] py-2 flex items-center justify-between  overflow-hidden">
-      <div
-        onClick={() => router.push(AppRoute.HOME)}
-        className="cursor-pointer"
-      >
-        <Logo />
-      </div>
+      <NextLink href={AppRoute.HOME} label={<Logo />} />
       <>
         {!openMenu ? (
           <BiMenuAltRight

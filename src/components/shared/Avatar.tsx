@@ -11,7 +11,7 @@ interface AvatarProps {
 }
 
 const Avatar = (props: AvatarProps) => {
-  const { src, alt, width = 'w-16', customClass, imageClass, title } = props;
+  const { src, alt, width = 'w-12', customClass, imageClass, title } = props;
   return (
     <div
       className={classNames('avatar online', customClass)}
@@ -19,7 +19,7 @@ const Avatar = (props: AvatarProps) => {
     >
       <div
         className={classNames(
-          `mask mask-hexagon bg-gray-600 w-16 md:${width}`,
+          `mask mask-hexagon bg-gray-600 w-8 md:${width}`,
           imageClass
         )}
       >
