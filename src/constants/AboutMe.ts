@@ -8,7 +8,7 @@ export type DeckCard = {
 };
 
 export const aboutDetail =
-  "Hello, I'm Rajeev and I enjoy creating things that live on the internet. I am more focued building web application as well as mobile application that server meanfull purpose to the user out world !";
+  "Hello, I'm Rajeev and I enjoy creating things that live on the internet. I am more focued building web application as well as mobile application that server meanfull purpose to the user out world!. Beside work, I've habit of developing interpersonal role with my fellow members. I love ❤️ enjoying gossiping with friends and collages on different agendas. Out of work I'm a student learning new idea about tech as well increasing productivity. Interested taking pictures, and playing computer games.";
 
 export const techs: string[] = [
   'Javascripts (ES6+)',

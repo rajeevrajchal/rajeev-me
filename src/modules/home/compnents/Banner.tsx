@@ -7,12 +7,11 @@ const MultipleText = () => (
     <Text
       variant="p"
       customClass="tracking-wider w-full text-justify md:w-4/5"
-      text="Fullstack Software developer, specializing in building digital web based softwares. Currently, I'm building simple, accessible product at: "
-    />
-    <Text
-      text="Goal to pursue a career as a Fullstack Software Developer."
-      variant="p"
-      customClass="tracking-wider w-full text-justify md:w-4/5"
+      text="
+      Hi 👋 , I am a full-stack JavaScript developer who enjoys building simple, meaningful products.
+      At the moment, I am focused on fullstack development, and I have more than 4 years of experience building web applications.
+      React (Frontend), Node (Backend) skills that I consider to be my strengths 💪 in development.
+      Currently, I'm building simple, accessible product at:"
     />
     <div className="flex flex-col gap-1 md:gap-0">
       <NextLink
@@ -34,6 +33,11 @@ const Banner = () => (
       text="Fullstack  JavaScript/Typescript  Developer"
       variant="h2"
       customClass="capitalize md:leading-5 tracking-wider text-justify"
+    />
+    <Text
+      text="Goal to pursue a career as a Fullstack Software Developer & on  Data Science."
+      variant="h6"
+      customClass="tracking-wider w-full text-justify md:w-4/5"
     />
     <Text text={<MultipleText />} variant="p" />
   </div>

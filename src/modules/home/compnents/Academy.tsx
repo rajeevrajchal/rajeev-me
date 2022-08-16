@@ -16,7 +16,7 @@ const academies: AcademyType[] = [
     startDate: '2017',
     endDate: '2021',
     description:
-      "I've pursue my Bsc. in Computer Science and Information Technology from the Tribhuvan University of Nepal",
+      "I've pursue my Bsc. in Computer Science and Information Technology from the Tribhuvan University of Nepal. Major subjects include: Computer Science, Information Technology, Web Development, Database Management, Software Engineering, and Software Design & Lifecycles.",
   },
   {
     degree: 'Intermediate (+2)',
@@ -24,7 +24,7 @@ const academies: AcademyType[] = [
     startDate: '2017',
     endDate: '2021',
     description:
-      "I've pursue my Bsc. in Computer Science and Information Technology from the Tribhuvan University of Nepal",
+      "I've pursue my Intermediate (+2) from the Higher Secondary School of Nepal. Major subjects are: Mathematics, Physics, Chemistry, and Computer Science",
   },
 ];
 

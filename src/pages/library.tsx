@@ -1,6 +1,5 @@
 import SectionTitle from '@components/shared/SectionTitle';
 import SEOHead from '@components/shared/SeoHead';
-import Text from '@components/shared/Text';
 import LandingLayout from '@layouts/LandingLayout';
 import LibraryCard from '@modules/library/LibraryCard';
 
@@ -41,6 +40,12 @@ const libries = [
   },
   {
     title: 'React',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
+    metaDesc:
+      'React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.',
+  },
+  {
+    title: 'Node',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
     metaDesc:
       'React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.',
