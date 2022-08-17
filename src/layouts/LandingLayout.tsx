@@ -17,7 +17,7 @@ const LandingLayout = (props: LandingLayoutProps) => {
     <div
       data-theme={colorMode}
       className={classNames(
-        'h-screen w-screen relative overflow-x-hidden',
+        'h-screen w-screen relative overflow-x-hidden text-white',
         "bg-[url('/images/background.svg')]",
         'bg-no-repeat',
         'bg-cover'

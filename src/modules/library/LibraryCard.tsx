@@ -8,7 +8,7 @@ const LibraryCard = (props: any) => {
   return (
     <div
       className={classNames(
-        'card bg-base-100 shadow-xl min-h-94 relative',
+        'card bg-base-100 shadow-xl min-h-94 relative text-black',
         "bg-[url('/images/curve.svg')]",
         'bg-no-repeat',
         'bg-cover'
