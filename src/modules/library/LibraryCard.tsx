@@ -8,7 +8,7 @@ const LibraryCard = (props: any) => {
   return (
     <div
       className={classNames(
-        'card bg-base-100 shadow-xl min-h-94 relative text-black',
+        'card shadow-xl min-h-94 relative ',
         "bg-[url('/images/curve.svg')]",
         'bg-no-repeat',
         'bg-cover'
@@ -26,7 +26,7 @@ const LibraryCard = (props: any) => {
         <Text text={item.metaDesc} />
       </div>
       <span className="absolute top-5 right-5 text-white">
-        <GrFavorite size={30} className="text-white" />
+        <GrFavorite size={30} color="white" className="text-white" />
       </span>
     </div>
   );

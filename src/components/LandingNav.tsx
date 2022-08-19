@@ -24,29 +24,76 @@ const LandingNav = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <div className="px-6 md:px-54 xl:px-64 2xl:px-[30rem] py-2 flex items-center justify-between  overflow-hidden">
-      <NextLink href={AppRoute.HOME} label={<Logo />} />
-      <>
-        {!openMenu ? (
-          <BiMenuAltRight
-            size={40}
-            color="#4e85ff"
-            className=" block md:hidden"
-            onClick={() => setOpenMenu(true)}
-          />
-        ) : (
-          <IoClose
-            size={40}
-            color="#4e85ff"
-            className="block md:hidden"
-            onClick={() => setOpenMenu(false)}
-          />
-        )}
-      </>
+    <>
+      <div className="px-6 md:px-54 xl:px-64 2xl:px-[30rem] py-4 flex items-center justify-between overflow-hidden sticky top-0 left-0 w-full backdrop-blur z-20">
+        <NextLink href={AppRoute.HOME} label={<Logo />} />
+        <>
+          {!openMenu ? (
+            <BiMenuAltRight
+              size={40}
+              color="#4e85ff"
+              className=" block md:hidden"
+              onClick={() => setOpenMenu(true)}
+            />
+          ) : (
+            <IoClose
+              size={40}
+              color="#4e85ff"
+              className="block md:hidden"
+              onClick={() => setOpenMenu(false)}
+            />
+          )}
+        </>
+        <ul
+          className={classNames(
+            'absolute md:relative top-20 md:top-0 left-0 z-50 backdrop-blur md:bg-transparent',
+            'w-full h-full flex-col md:flex-row  sm:gap-7 p-12 md:p-0 gap-12 md:justify-end md:flex',
+            openMenu ? 'flex md:flex' : 'hidden'
+          )}
+        >
+          {menu.map((nav: NavLink) => (
+            <li
+              onClick={() => setOpenMenu(false)}
+              key={nav.label}
+              title={nav.title}
+            >
+              <NextLink
+                href={nav.link}
+                label={nav.label}
+                active={pathname === nav.link}
+                customClass="capitalize text-lg wideshadow"
+              />
+            </li>
+          ))}
+
+          <div className="flex flex-col gap-8 md:hidden">
+            <ul className="grid grid-cols-3 gap-6 justify-center items-center place-content-center">
+              {SOCIAL_LINKS.map((item: SOCIAL_LINKS_TYPE, index: number) => (
+                <li key={`${item.label}-${index}`}>
+                  <NextLink
+                    external
+                    href={item.link}
+                    label={item.label}
+                    icon={item.icon}
+                    customClass="capitalize flex flex-col items-center gap-2"
+                  />
+                </li>
+              ))}
+            </ul>
+            <Text
+              text="Build with love - Rajeev Rajchal"
+              customClass="text-center"
+            />
+          </div>
+        </ul>
+      </div>
+
+      {/* for mobile */}
       <ul
         className={classNames(
-          'absolute md:relative top-20 md:top-0 left-0 z-50 bg-[#2a303c] md:bg-transparent w-full h-full flex-col md:flex-row  sm:gap-7 p-12 md:p-0 gap-12 md:justify-end md:flex',
-          openMenu ? 'flex md:flex' : 'hidden'
+          'absolute md:relative top-20 md:top-0 left-0 z-50 backdrop-blur md:bg-transparent',
+          'w-full h-screen flex-col md:flex-row  sm:gap-7 p-12 md:p-0 gap-12 md:justify-end md:hidden',
+          openMenu ? 'flex overflow-hidden h-full' : 'hidden'
         )}
       >
         {menu.map((nav: NavLink) => (
@@ -59,7 +106,7 @@ const LandingNav = () => {
               href={nav.link}
               label={nav.label}
               active={pathname === nav.link}
-              customClass="capitalize"
+              customClass="capitalize text-lg wideshadow"
             />
           </li>
         ))}
@@ -84,7 +131,7 @@ const LandingNav = () => {
           />
         </div>
       </ul>
-    </div>
+    </>
   );
 };
 

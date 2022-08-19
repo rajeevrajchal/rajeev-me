@@ -20,7 +20,8 @@ const LandingLayout = (props: LandingLayoutProps) => {
         'h-screen w-screen relative overflow-x-hidden text-white',
         "bg-[url('/images/background.svg')]",
         'bg-no-repeat',
-        'bg-cover'
+        'bg-cover',
+        'relative'
       )}
     >
       <LandingNav />

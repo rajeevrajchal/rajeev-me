@@ -51,6 +51,7 @@ const libries = [
       'React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.',
   },
 ];
+
 const Library = () => (
   <div className="flex flex-col gap-4">
     <SectionTitle label="Libraries I am comfortable with." />
