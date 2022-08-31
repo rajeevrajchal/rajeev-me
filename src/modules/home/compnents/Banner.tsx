@@ -1,6 +1,12 @@
+/* eslint-disable react/no-array-index-key */
 import Text from '@components/shared/Text';
 import NextLink from '@components/shared/Link';
-import { NLV, UPWORK } from 'constants/SocialLink';
+import {
+  NLV,
+  SOCIAL_LINKS,
+  SOCIAL_LINKS_TYPE,
+  UPWORK,
+} from 'constants/SocialLink';
 
 const MultipleText = () => (
   <div className="flex flex-col gap-2">
@@ -39,6 +45,18 @@ const Banner = () => (
       variant="h6"
       customClass="tracking-wider w-full text-justify md:w-4/5"
     />
+    <ul className="flex gap-8 ">
+      {SOCIAL_LINKS.map((item: SOCIAL_LINKS_TYPE, index: number) => (
+        <li key={`${item.label}-${index}`} title={item.label}>
+          <NextLink
+            external
+            href={item.link}
+            icon={item.icon}
+            customClass="capitalize flex flex-col items-center gap-2"
+          />
+        </li>
+      ))}
+    </ul>
     <Text text={<MultipleText />} variant="p" />
   </div>
 );

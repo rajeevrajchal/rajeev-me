@@ -21,8 +21,8 @@ const academies: AcademyType[] = [
   {
     degree: 'Intermediate (+2)',
     school: 'Higher Secondary School',
-    startDate: '2017',
-    endDate: '2021',
+    startDate: '2014',
+    endDate: '2016',
     description:
       "I've pursue my Intermediate (+2) from the Higher Secondary School of Nepal. Major subjects are: Mathematics, Physics, Chemistry, and Computer Science",
   },
