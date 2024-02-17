@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiUpwork } from "react-icons/si";
+import { IoIosMail } from "react-icons/io";
 
 const Home = () => {
   return (
@@ -66,12 +67,21 @@ const Home = () => {
         </div>
         <div className="flex flex-col gap-2">
           <p>Get a deal ?</p>
-          <div>
+          <div className="flex items-center gap-4 flex-wrap">
             <Link
               href="https://www.upwork.com/freelancers/~01f0978587bed2e79c"
               target="_blank"
             >
               <SiUpwork className="text-[#35A800]" size={32} />
+            </Link>
+            <Link
+              href="mailto:rajeevrajchal12@gmail.com"
+              passHref
+              legacyBehavior
+            >
+              <a href="mailto:rajeevrajchal12@gmail.com">
+                <IoIosMail className="text-blue-500" size={32} />
+              </a>
             </Link>
           </div>
         </div>
