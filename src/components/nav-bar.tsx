@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { FaBloggerB, FaHome } from "react-icons/fa";
 import { FiDownloadCloud } from "react-icons/fi";
 import { IoLibraryOutline } from "react-icons/io5";
+import ColorSwitch from "./color-switch";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -14,7 +15,7 @@ const Navbar = () => {
       <Text fw="bold" size="lg">
         Rajeev Rajchal
       </Text>
-      <Center>
+      <Center visibleFrom="md">
         <Flex gap="lg">
           {[
             {
@@ -48,9 +49,12 @@ const Navbar = () => {
           ))}
         </Flex>
       </Center>
-      <Button variant="light" leftSection={<FiDownloadCloud size={22} />}>
-        Resume
-      </Button>
+      <Flex align="center" gap="md">
+        <ColorSwitch />
+        <Button variant="light" leftSection={<FiDownloadCloud size={22} />}>
+          Resume
+        </Button>
+      </Flex>
     </Flex>
   );
 };

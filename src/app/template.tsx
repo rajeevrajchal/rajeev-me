@@ -8,7 +8,15 @@ const HomeTemplate = (props: PropsWithChildren) => {
   const { children } = props;
 
   return (
-    <Container size="xl" className="h-screen px-0 flex flex-col">
+    <Container
+      size="xl"
+      className="h-screen px-0 flex flex-col"
+      px={{
+        base: "md",
+        md: "xl",
+        lg: 0,
+      }}
+    >
       <Navbar />
       {children}
     </Container>

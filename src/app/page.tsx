@@ -5,7 +5,15 @@ import { Avatar, Box, Flex, Stack, Text, Title } from "@mantine/core";
 
 const Home = () => {
   return (
-    <Flex align="center" justify="space-between" gap="xl" mt="150px">
+    <Flex
+      align="center"
+      justify="space-between"
+      gap="xl"
+      mt={{
+        base: "100px",
+        md: "150px",
+      }}
+    >
       <Stack className="flex-1">
         <Stack gap={0}>
           <Flex>
@@ -20,7 +28,7 @@ const Home = () => {
           </Title>
           <Title order={3}>Based In Nepal 🇳🇵.</Title>
         </Stack>
-        <Text className="w-2/3" ta="justify">
+        <Text ta="justify">
           I am a skilled software developer with over 4 years of experience
           creating user-centric online apps. Specializing in React, JavaScript,
           TypeScript, Next.js (frontend) and Nest/Express (backend). Experienced
@@ -30,7 +38,7 @@ const Home = () => {
         </Text>
         <SocialLinks />
       </Stack>
-      <Box className="w-fit">
+      <Box className="w-fit" visibleFrom="md">
         <Avatar
           variant="transparent"
           src="./rajeev-no-bg.png"
