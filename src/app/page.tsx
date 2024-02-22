@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiUpwork } from "react-icons/si";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import { SiUpwork } from "react-icons/si";
 
 const Home = () => {
   return (
