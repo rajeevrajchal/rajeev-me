@@ -1,7 +1,7 @@
 "use client";
 
 import SocialLinks from "@/components/social-links";
-import { Avatar, Box, Flex, Stack, Text, Title } from "@mantine/core";
+import { Avatar, Flex, Stack, Text, Title } from "@mantine/core";
 
 const Home = () => {
   return (
@@ -10,8 +10,12 @@ const Home = () => {
       justify="space-between"
       gap="xl"
       mt={{
-        base: "100px",
+        base: "20px",
         md: "150px",
+      }}
+      direction={{
+        base: "column-reverse",
+        md: "row",
       }}
     >
       <Stack className="flex-1">
@@ -38,14 +42,20 @@ const Home = () => {
         </Text>
         <SocialLinks />
       </Stack>
-      <Box className="w-fit" visibleFrom="md">
-        <Avatar
-          variant="transparent"
-          src="./rajeev-no-bg.png"
-          alt="Rajeev Rajchal"
-          size="400"
-        />
-      </Box>
+      <Avatar
+        visibleFrom="md"
+        variant="transparent"
+        src="./rajeev-no-bg.png"
+        alt="Rajeev Rajchal"
+        size="400"
+      />
+      <Avatar
+        hiddenFrom="md"
+        variant="transparent"
+        src="./rajeev-no-bg.png"
+        alt="Rajeev Rajchal"
+        size="200"
+      />
     </Flex>
   );
 };

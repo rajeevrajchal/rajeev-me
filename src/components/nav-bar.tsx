@@ -51,7 +51,7 @@ const Navbar = () => {
       </Center>
       <Flex align="center" gap="md">
         <ColorSwitch />
-        <Button variant="light" leftSection={<FiDownloadCloud size={22} />}>
+        <Button variant="subtle" leftSection={<FiDownloadCloud size={22} />}>
           Resume
         </Button>
       </Flex>
