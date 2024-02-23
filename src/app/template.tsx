@@ -9,7 +9,7 @@ const HomeTemplate = (props: PropsWithChildren) => {
 
   return (
     <Container
-      size="xl"
+      size="lg"
       className="h-screen px-0 flex flex-col"
       px={{
         base: "xl",

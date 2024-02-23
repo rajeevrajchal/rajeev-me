@@ -10,7 +10,14 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <Flex py="xs" align="center" justify="space-between">
+    <Flex
+      py="xs"
+      align="center"
+      justify="space-between"
+      pos="sticky"
+      w="100%"
+      top="0"
+    >
       {/* <Avatar src="./rajeev.jpg" alt="it's me" /> */}
       <Text fw="bold" size="lg">
         Rajeev Rajchal

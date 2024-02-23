@@ -5,58 +5,75 @@ import { Avatar, Flex, Stack, Text, Title } from "@mantine/core";
 
 const Home = () => {
   return (
-    <Flex
-      align="center"
-      justify="space-between"
-      gap="xl"
-      mt={{
-        base: "20px",
-        md: "150px",
-      }}
-      direction={{
-        base: "column-reverse",
-        md: "row",
-      }}
-    >
-      <Stack className="flex-1">
-        <Stack gap={0}>
-          <Flex>
-            <Title order={1} className="text-[50px]">
-              Hello
-            </Title>
-            <Avatar size="lg" variant="transparent" src="./wave.gif" />
-          </Flex>
-          <Title order={3}>I am Rajeev Rajchal, </Title>
-          <Title order={2} className="text-[30px]">
+    <Stack gap="xl">
+      <Flex
+        align="center"
+        justify="space-between"
+        gap="xl"
+        mt={{
+          base: "20px",
+          md: "150px",
+        }}
+        direction={{
+          base: "column-reverse",
+          md: "row",
+        }}
+      >
+        <Stack className="w-2/3">
+          <Title order={3} className="text-[30px]">
             Software Developer | Frontend Development 🧑‍💻
           </Title>
-          <Title order={3}>Based In Nepal 🇳🇵.</Title>
+          <Stack gap={0}>
+            <Flex align="center">
+              <Title order={5}>Hi there!</Title>
+              <Avatar
+                size="md"
+                variant="transparent"
+                src="./wave.gif"
+                className="mb-1"
+              />
+            </Flex>
+            <Text ta="justify">
+              I'm Rajeev, a software developer who loves creating awesome user
+              experiences with neat and effective code. With 4 years of
+              experience, I've become skilled at building web applications that
+              work smoothly.
+            </Text>
+          </Stack>
+          <Text ta="justify">
+            Beyond technical expertise, I believe in the power of knowledge
+            sharing. That's why I'm actively involved in the developer
+            community, contributing insights and collaborating on projects. My
+            goal is to not only refine my own skills but also empower others to
+            create better web experiences together.
+          </Text>
+          <SocialLinks />
         </Stack>
-        <Text ta="justify">
-          I am a skilled software developer with over 4 years of experience
-          creating user-centric online apps. Specializing in React, JavaScript,
-          TypeScript, Next.js (frontend) and Nest/Express (backend). Experienced
-          in collaborative cooperation, efficient workflows, and creative
-          problem-solving. Eager to contribute to meaningful initiatives and
-          improve internet experiences. 🙂
-        </Text>
-        <SocialLinks />
+        <Avatar
+          visibleFrom="md"
+          variant="transparent"
+          src="./rajeev-no-bg.png"
+          alt="Rajeev Rajchal"
+          size="300"
+        />
+        <Avatar
+          hiddenFrom="md"
+          variant="transparent"
+          src="./rajeev-no-bg.png"
+          alt="Rajeev Rajchal"
+          size="200"
+        />
+      </Flex>
+
+      <Stack
+        mt={{
+          base: "20px",
+          md: "150px",
+        }}
+      >
+        <Title order={3}>Portfolio</Title>
       </Stack>
-      <Avatar
-        visibleFrom="md"
-        variant="transparent"
-        src="./rajeev-no-bg.png"
-        alt="Rajeev Rajchal"
-        size="400"
-      />
-      <Avatar
-        hiddenFrom="md"
-        variant="transparent"
-        src="./rajeev-no-bg.png"
-        alt="Rajeev Rajchal"
-        size="200"
-      />
-    </Flex>
+    </Stack>
   );
 };
 
