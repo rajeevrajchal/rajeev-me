@@ -12,7 +12,7 @@ const HomeTemplate = (props: PropsWithChildren) => {
       size="xl"
       className="h-screen px-0 flex flex-col"
       px={{
-        base: "md",
+        base: "xl",
         md: "xl",
         lg: 0,
       }}
