@@ -1,7 +1,8 @@
 const AppRoute = {
   home: "/",
   library: "/library",
-  blogs: "/blogs",
+  projects: "/projects",
+  about: "/about",
 };
 
 export default AppRoute;

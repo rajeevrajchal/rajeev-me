@@ -1,6 +1,6 @@
 import { ActionIcon, Flex } from "@mantine/core";
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const socializes = [
   {
@@ -14,6 +14,13 @@ const socializes = [
     link: "https://github.com/rajeevrajchal/",
     label: "github",
     key: "github",
+    color: "black",
+  },
+  {
+    icon: <FaInstagram size={24} />,
+    link: "https://www.instagram.com/dev.rajeev/",
+    label: "instagram",
+    key: "instagram",
     color: "black",
   },
 ];
