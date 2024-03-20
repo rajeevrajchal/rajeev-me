@@ -1,5 +1,6 @@
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
 import theme from "@/constant/theme";
@@ -24,6 +25,7 @@ export default function RootLayout({
         <MantineProvider defaultColorScheme="dark" theme={theme}>
           {children}
         </MantineProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
