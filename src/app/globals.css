@@ -1,14 +1,14 @@
-@layer tailwind {
-  @tailwind base;
-}
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 
 * {
-  -ms-overflow-style: none;
-}
-::-webkit-scrollbar {
-  display: none;
+  font-family: "Mochiy Pop One", sans-serif;
 }

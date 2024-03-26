@@ -1,14 +1,11 @@
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import "@mantine/core/styles.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-
-import theme from "@/constant/theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Rajeev Rajchal",
-  description: "This is a Rajeev",
+  description: "I am Rajeev",
 };
 
 export default function RootLayout({
@@ -18,14 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <ColorSchemeScript />
-      </head>
       <body>
-        <MantineProvider defaultColorScheme="dark" theme={theme}>
-          {children}
-        </MantineProvider>
-        <SpeedInsights />
+        <Theme>{children}</Theme>
       </body>
     </html>
   );

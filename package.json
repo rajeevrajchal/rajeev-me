@@ -3,19 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3005",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "^7.5.3",
-    "@mantine/hooks": "^7.5.3",
-    "@vercel/speed-insights": "^1.0.10",
-    "next": "14.1.0",
+    "@radix-ui/themes": "^3.0.1",
+    "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.0.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -23,10 +20,8 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0",
-    "postcss": "^8.4.35",
-    "postcss-preset-mantine": "^1.13.0",
-    "postcss-simple-vars": "^7.0.1",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
