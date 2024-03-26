@@ -9,16 +9,18 @@ const ColorSwitch = () => {
     setColorScheme(colorScheme === "light" ? "dark" : "light");
   };
 
+  console.log("colorScheme", colorScheme);
+
   return (
     <ActionIcon
       variant="transparent"
       aria-label="Color Swatch"
       onClick={handleColorSwitch}
     >
-      {colorScheme !== "light" ? (
-        <TiAdjustBrightness size={24} color="white" />
-      ) : (
+      {colorScheme === "light" ? (
         <WiMoonAltWaningCrescent5 size={24} color="black" />
+      ) : (
+        <TiAdjustBrightness size={24} color="white" />
       )}
     </ActionIcon>
   );
