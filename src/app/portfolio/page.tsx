@@ -3,8 +3,6 @@ import { getPortfolio } from "./action";
 
 const Portfolio = async () => {
   const portfolio = await getPortfolio();
-  console.log("portfolio", portfolio);
-
   return (
     <Flex direction="column" gap="2">
       <p className="text-[4rem]">I am Rajeev. I need free design suggestion</p>
