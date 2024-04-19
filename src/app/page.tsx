@@ -1,5 +1,3 @@
-const Home = async () => {
-  return <p>this is home</p>;
-};
-
-export default Home;
+export default function Home() {
+  return <p>hello world</p>;
+}

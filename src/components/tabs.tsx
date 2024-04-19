@@ -1,35 +1,33 @@
-import { Tabs as RTabs } from "@radix-ui/themes";
+import { TabNav as RTabNav } from "@radix-ui/themes";
 
 type TAB = {
   label: string;
   key: string;
+  href: string;
 };
 
 interface TabsProps {
   active: string;
   tabs: TAB[];
-  onChangeTab: (key: string) => void;
 }
 
-const Tabs = (props: TabsProps) => {
-  const { active, tabs, onChangeTab } = props;
+const TabsNav = (props: TabsProps) => {
+  const { active, tabs } = props;
 
   return (
-    <RTabs.Root defaultValue={active}>
-      <RTabs.List>
-        {tabs.map((tab: TAB, index: number) => (
-          <RTabs.Trigger
-            value={tab.key}
-            key={`${tab.key}-${index}`}
-            onClick={() => onChangeTab(tab.key)}
-            className="cursor-pointer"
-          >
-            {tab.label}
-          </RTabs.Trigger>
-        ))}
-      </RTabs.List>
-    </RTabs.Root>
+    <RTabNav.Root>
+      {tabs.map((tab: TAB, index: number) => (
+        <RTabNav.Link
+          active={active === tab.key}
+          key={`${tab.key}-${index}`}
+          className="cursor-pointer"
+          href={tab.href}
+        >
+          {tab.label}
+        </RTabNav.Link>
+      ))}
+    </RTabNav.Root>
   );
 };
 
-export default Tabs;
+export default TabsNav;

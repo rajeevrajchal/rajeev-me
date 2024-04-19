@@ -7,8 +7,15 @@ const Headline = () => {
   return (
     <Flex direction="column" gapY="2">
       <Heading as="h6">Rajeev Rajchal</Heading>
-      <Text>Software Developer | Focus Frontend Developer</Text>
-      <Flex align="center" gapX="4">
+      <Heading as="h6">Software Developer | Focus Frontend</Heading>
+      <Flex
+        align={{
+          sm: "start",
+          md: "center",
+        }}
+        gapX="4"
+        className="flex-col md:flex-row"
+      >
         <Flex align="center" gapX="2">
           <FiBriefcase size={20} />
           <Text as="p" size="2">

@@ -1,13 +1,17 @@
-import AppFooter from "@/components/footer";
-import Appbar from "@/components/header/appbar";
-import { Box, Container, Flex, Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
+import { Open_Sans } from "next/font/google";
+
+import { ColorThemeProvider } from "@/hooks/use-color-theme";
+import { Theme } from "@radix-ui/themes";
+import { cookies } from "next/headers";
 import "./globals.css";
+
+const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rajeev Rajchal",
-  description: "I am Rajeev",
+  description: "Software Developer",
 };
 
 export default function RootLayout({
@@ -15,24 +19,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = cookies();
+  const theme = cookieStore?.get("theme");
+
   return (
     <html lang="en">
-      <body>
-        <Theme>
-          <Container
-            size="4"
-            className="p-4 w-screen min-h-screen"
-            position="relative"
+      <body className={open_sans.className}>
+        <ColorThemeProvider>
+          <Theme
+            grayColor="gray"
+            panelBackground="solid"
+            scaling="100%"
+            appearance={theme as any}
           >
-            <Flex direction="column" justify="between" gapY="6">
-              <Appbar />
-              <Box height="100%" width="100%">
-                {children}
-              </Box>
-              <AppFooter />
-            </Flex>
-          </Container>
-        </Theme>
+            {children}
+          </Theme>
+        </ColorThemeProvider>
       </body>
     </html>
   );
