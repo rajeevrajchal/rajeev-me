@@ -14,6 +14,7 @@ const Headline = () => {
           md: "center",
         }}
         gapX="4"
+        gapY="1"
         className="flex-col md:flex-row"
       >
         <Flex align="center" gapX="2">

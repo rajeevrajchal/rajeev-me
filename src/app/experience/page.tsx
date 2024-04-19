@@ -71,7 +71,7 @@ const Experience = async () => {
                   ) || [],
                   (desc: string, desc_index: number) => (
                     <li
-                      className="list-disc text-gray-500  text-md"
+                      className="list-disc text-gray-500  text-md text-justify"
                       key={`sentence-${desc}-${desc_index}`}
                     >
                       {desc}
