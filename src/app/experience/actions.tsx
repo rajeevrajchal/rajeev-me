@@ -6,6 +6,7 @@ export async function getExperience() {
   try {
     const data = await notion.databases.query({
       database_id: process.env.NEXT_PUBLIC_NOTION_DB_EXPERIENCE!,
+      in_trash: false,
     });
     return {
       data:

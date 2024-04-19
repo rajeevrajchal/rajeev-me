@@ -1,3 +1,4 @@
+import breakSentences from "@/utils/blullet-split";
 import { Avatar, Button, Flex, Text } from "@radix-ui/themes";
 import { map } from "lodash";
 import moment from "moment";
@@ -41,6 +42,12 @@ const Experience = async () => {
                 <Text weight="medium">
                   {experience?.properties?.name?.title?.[0]?.plain_text}
                 </Text>
+
+                <Text weight="medium">
+                  (
+                  {experience?.properties?.location?.rich_text?.[0]?.plain_text}
+                  )
+                </Text>
                 <Text>@</Text>
                 <Text className="text-gray-500">
                   {moment(experience?.properties?.from?.date?.start).format(
@@ -57,16 +64,20 @@ const Experience = async () => {
                 </Text>
               </Flex>
               <ul className="px-8 flex flex-col gap-y-1">
-                <li className="list-disc text-gray-500  text-md">
-                  Developed front-end user interface using React, React Native
-                  and JavaScript for Web Apps, iOS and Android mobile
-                  applications.
-                </li>
-                <li className="list-disc text-gray-500  text-md">
-                  Developed front-end user interface using React, React Native
-                  and JavaScript for Web Apps, iOS and Android mobile
-                  applications.
-                </li>
+                {map(
+                  breakSentences(
+                    experience?.properties?.description?.rich_text?.[0]
+                      ?.plain_text || ""
+                  ) || [],
+                  (desc: string, desc_index: number) => (
+                    <li
+                      className="list-disc text-gray-500  text-md"
+                      key={`sentence-${desc}-${desc_index}`}
+                    >
+                      {desc}
+                    </li>
+                  )
+                )}
               </ul>
             </Flex>
           );
