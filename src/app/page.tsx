@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { Button, DataList, Flex, Text } from "@radix-ui/themes";
-import { IoCloudDownloadOutline } from "react-icons/io5";
+import { DataList, Flex, Text } from "@radix-ui/themes";
 
 const description = `Hey there! I'm a software developer with four years of experience, eager to learn and adopt new technologies. I specialize in frontend development with React, JavaScript, and Next.js, as well as backend development with Nest and Express. Whether it's crafting beautiful interfaces, building robust backend systems, or learning the latest tech trends, I'm all in. Let's collaborate and create some incredible online experiences together`;
 
-export default function Home() {
+export default async function Home() {
   return (
     <Flex direction="column" gapY="8" width="100%">
       <Flex gapX="8" gapY="4" className="flex-col md:flex-row">
@@ -42,12 +41,6 @@ export default function Home() {
               </DataList.Value>
             </DataList.Item>
           </DataList.Root>
-          <div className="w-fit">
-            <Button radius="full" className="w-fit">
-              <IoCloudDownloadOutline size={22} />
-              <span>Get Resume</span>
-            </Button>
-          </div>
         </Flex>
       </Flex>
     </Flex>

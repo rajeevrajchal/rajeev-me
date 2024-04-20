@@ -27,9 +27,40 @@ const Experience = async () => {
                   src={experience?.icon?.external?.url}
                   className="hidden md:visible"
                 />
-                <Text weight="bold">
-                  {experience?.properties?.role?.select?.name}
-                </Text>
+                <Flex direction="column">
+                  <Text weight="bold">
+                    {experience?.properties?.role?.select?.name}
+                  </Text>
+                  <Flex gapX="2">
+                    <Text weight="medium" size="2">
+                      {experience?.properties?.name?.title?.[0]?.plain_text}
+                    </Text>
+                    <Text weight="medium" size="2">
+                      (
+                      {
+                        experience?.properties?.location?.rich_text?.[0]
+                          ?.plain_text
+                      }
+                      )
+                    </Text>
+                    <Text size="2">@</Text>
+                    <Text className="text-gray-500" size="2">
+                      {moment(experience?.properties?.from?.date?.start).format(
+                        "YYYY"
+                      )}
+                    </Text>
+                    <Text className="text-gray-500" size="2">
+                      -
+                    </Text>
+                    <Text className="text-gray-500" size="2">
+                      {experience?.properties?.from?.date?.end
+                        ? moment(
+                            experience?.properties?.from?.date?.end
+                          ).format("YYYY")
+                        : "Running"}
+                    </Text>
+                  </Flex>
+                </Flex>
               </Flex>
               <Flex gapX="3">
                 {map(experience?.properties?.type?.multi_select, (type) => (
@@ -37,31 +68,6 @@ const Experience = async () => {
                     <span className="capitalize">{type.name}</span>
                   </Button>
                 ))}
-              </Flex>
-              <Flex gapX="2">
-                <Text weight="medium">
-                  {experience?.properties?.name?.title?.[0]?.plain_text}
-                </Text>
-
-                <Text weight="medium">
-                  (
-                  {experience?.properties?.location?.rich_text?.[0]?.plain_text}
-                  )
-                </Text>
-                <Text>@</Text>
-                <Text className="text-gray-500">
-                  {moment(experience?.properties?.from?.date?.start).format(
-                    "YYYY"
-                  )}
-                </Text>
-                <Text className="text-gray-500">-</Text>
-                <Text className="text-gray-500">
-                  {experience?.properties?.from?.date?.end
-                    ? moment(experience?.properties?.from?.date?.end).format(
-                        "YYYY"
-                      )
-                    : "Running"}
-                </Text>
               </Flex>
               <ul className="px-8 flex flex-col gap-y-1">
                 {map(

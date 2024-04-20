@@ -1,6 +1,6 @@
 import SocialLink from "@/components/social-links";
-import { Avatar, Button, Flex } from "@radix-ui/themes";
-import { IoCloudDownloadOutline } from "react-icons/io5";
+import { Avatar, Flex } from "@radix-ui/themes";
+import DownloadResume from "./download-resume";
 
 const AppHeader = () => {
   return (
@@ -17,10 +17,7 @@ const AppHeader = () => {
 
       <Flex align="center" gapX="4">
         <SocialLink />
-        <Button variant="soft" radius="full" className="w-fit">
-          <IoCloudDownloadOutline />
-          <span>Resume</span>
-        </Button>
+        <DownloadResume />
         {/* <ColorModeSwitch /> */}
       </Flex>
     </Flex>
