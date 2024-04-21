@@ -43,6 +43,7 @@ export default async function Home() {
           </DataList.Root>
         </Flex>
       </Flex>
+      {/* <IntroGallery /> */}
     </Flex>
   );
 }
