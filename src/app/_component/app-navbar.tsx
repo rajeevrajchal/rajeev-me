@@ -27,11 +27,6 @@ const AppNavbar = () => {
             key: "/projects",
             href: "/projects",
           },
-          // {
-          //   label: "Tech",
-          //   key: "/tech",
-          //   href: "/tech",
-          // },
         ]}
       />
     </Box>

@@ -1,4 +1,5 @@
 import "@radix-ui/themes/styles.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
@@ -24,7 +25,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={open_sans.className}>
+      <body className={`${open_sans.className} scrollbar-thin`}>
         <ColorThemeProvider>
           <Theme
             grayColor="gray"
@@ -35,6 +36,7 @@ export default function RootLayout({
             {children}
           </Theme>
         </ColorThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
