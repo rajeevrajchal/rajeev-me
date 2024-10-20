@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	type GridLayout = {
 		name: string;
 		minWidth: number;
@@ -32,6 +34,7 @@
 			if (event.ctrlKey && event.key === 'g') {
 				event.preventDefault();
 				visible = !visible;
+				localStorage.setItem('debug-grid-visible', String(visible));
 			}
 		};
 
@@ -43,6 +46,10 @@
 			window.removeEventListener('keydown', handleKeyDown);
 			window.removeEventListener('resize', updateActiveLayout);
 		};
+	});
+
+	onMount(() => {
+		visible = localStorage.getItem('debug-grid-visible') === 'true';
 	});
 </script>
 
