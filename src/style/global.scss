@@ -8,10 +8,20 @@
 
 * {
 	margin: 0;
+	color: $text-white;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		color: $primary-color;
+	}
 }
 
 body {
 	min-height: 100vh;
 	overflow-y: auto;
 	overflow-x: hidden;
+	background: $dark-color;
+	color: $text-white;
 }

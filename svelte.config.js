@@ -20,7 +20,12 @@ const config = {
 			'@style': './src/style/*',
 			'@comp': './src/lib/components/*',
 			'@constants': './src/lib/constants/*',
-			'@tools': './src/lib/tools/*'
+			'@tools': './src/lib/tools/*',
+      '@types': './src/lib/types/*',
+      '@atoms': './src/lib/atoms/*',
+      '@components':'./src/lib/components/*',
+      '@actions': './src/lib/actions/*',
+      '@model': './src/lib/model/*'
 		}
 	}
 };
