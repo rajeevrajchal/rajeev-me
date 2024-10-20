@@ -13,6 +13,7 @@
 
 <style lang="scss">
 	.main {
+		position: relative;
 		background: $primary-background;
 		width: 100vw;
 		min-height: 100vh;
