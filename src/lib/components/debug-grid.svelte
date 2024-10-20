@@ -6,7 +6,7 @@
 		minWidth: number;
 		columns: number;
 		margin: number;
-		gutter: number;
+		gap: number;
 		offset: number;
 	};
 
@@ -14,10 +14,11 @@
 	let activeLayout = $state<GridLayout | null>(null);
 
 	let layouts = $state<GridLayout[]>([
-		{ name: 'Mobile', minWidth: 0, columns: 4, margin: 16, gutter: 16, offset: 0 },
-		{ name: 'Tablet', minWidth: 768, columns: 8, margin: 32, gutter: 20, offset: 0 },
-		{ name: 'Desktop', minWidth: 1024, columns: 12, margin: 32, gutter: 24, offset: 0 },
-		{ name: 'Large Desktop', minWidth: 1440, columns: 12, margin: 40, gutter: 24, offset: 0 }
+		{ name: 'Mobile', minWidth: 0, columns: 4, margin: 16, gap: 16, offset: 0 },
+		{ name: 'Tablet', minWidth: 768, columns: 8, margin: 32, gap: 20, offset: 0 },
+		{ name: 'Desktop', minWidth: 1024, columns: 12, margin: 32, gap: 24, offset: 0 },
+		{ name: 'Large Desktop', minWidth: 1440, columns: 12, margin: 40, gap: 24, offset: 0 },
+		{ name: 'Extra Large Desktop', minWidth: 1920, columns: 12, margin: 40, gap: 24, offset: 0 }
 	]);
 
 	function updateActiveLayout() {
@@ -58,7 +59,7 @@
 		class="grid"
 		class:visible
 		style:--columns={activeLayout.columns}
-		style:--gutter="{activeLayout.gutter}px"
+		style:--gap="{activeLayout.gap}px"
 		style:--margin="{activeLayout.margin}px"
 		style:--offset="{activeLayout.offset}px"
 	>
@@ -72,7 +73,7 @@
 	.grid {
 		display: none;
 		grid-template-columns: repeat(var(--columns), 1fr);
-		gap: var(--gutter);
+		gap: var(--gap);
 		padding: 0 calc(var(--margin) + var(--offset));
 		width: calc(100% - (var(--margin) * 2) - (var(--offset) * 2));
 		max-width: 1920px;
