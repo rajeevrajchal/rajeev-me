@@ -14,11 +14,11 @@
 	let activeLayout = $state<GridLayout | null>(null);
 
 	let layouts = $state<GridLayout[]>([
-		{ name: 'Mobile', minWidth: 0, columns: 4, margin: 16, gap: 16, offset: 0 },
-		{ name: 'Tablet', minWidth: 768, columns: 8, margin: 32, gap: 20, offset: 0 },
-		{ name: 'Desktop', minWidth: 1024, columns: 12, margin: 32, gap: 24, offset: 0 },
-		{ name: 'Large Desktop', minWidth: 1440, columns: 12, margin: 40, gap: 24, offset: 0 },
-		{ name: 'Extra Large Desktop', minWidth: 1920, columns: 12, margin: 40, gap: 24, offset: 0 }
+		{ name: 'Mobile', minWidth: 0, columns: 4, margin: 8, gap: 16, offset: 16 },
+		{ name: 'Tablet', minWidth: 768, columns: 8, margin: 32, gap: 20, offset: 35 },
+		{ name: 'Desktop', minWidth: 1024, columns: 12, margin: 32, gap: 35, offset: 35 },
+		{ name: 'Large Desktop', minWidth: 1440, columns: 12, margin: 40, gap: 35, offset: 35 },
+		{ name: 'Extra Large Desktop', minWidth: 1920, columns: 12, margin: 40, gap: 35, offset: 35 }
 	]);
 
 	function updateActiveLayout() {
@@ -36,13 +36,12 @@
 				event.preventDefault();
 				visible = !visible;
 				localStorage.setItem('debug-grid-visible', String(visible));
+				updateActiveLayout();
 			}
 		};
 
 		window.addEventListener('keydown', handleKeyDown);
-		updateActiveLayout();
 		window.addEventListener('resize', updateActiveLayout);
-
 		return () => {
 			window.removeEventListener('keydown', handleKeyDown);
 			window.removeEventListener('resize', updateActiveLayout);
@@ -51,10 +50,13 @@
 
 	onMount(() => {
 		visible = localStorage.getItem('debug-grid-visible') === 'true';
+		if (visible) {
+			updateActiveLayout();
+		}
 	});
 </script>
 
-{#if activeLayout}
+{#if activeLayout && visible}
 	<div
 		class="grid"
 		class:visible

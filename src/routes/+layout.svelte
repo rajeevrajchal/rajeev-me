@@ -1,21 +1,13 @@
 <script lang="ts">
-	import DebugGrid from '@comp/debug-grid.svelte';
-	import Navbar from '@comp/navbar.svelte';
+	import { PUBLIC_ENV_MODE } from '$env/static/public';
+	import DebugGrid from '@comp/debug/debug-grid.svelte';
 	import '@style/global.scss';
+
 	const { children } = $props();
 </script>
 
-<div class="main">
-	<Navbar />
-	{@render children()}
-</div>
-<DebugGrid />
+{#if PUBLIC_ENV_MODE === 'development'}
+	<DebugGrid />
+{/if}
 
-<style lang="scss">
-	.main {
-		position: relative;
-		background: $primary-background;
-		width: 100vw;
-		min-height: 100vh;
-	}
-</style>
+{@render children()}

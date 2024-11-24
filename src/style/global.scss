@@ -1,0 +1,41 @@
+@import '@style/utils/breakpoint.scss';
+@import '@style/utils/page.scss';
+@import '@style/components/button.scss';
+@import '@style/components/text.scss';
+
+:root {
+	--gutter: #{$gutter-md};
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:focus {
+	outline: none;
+}
+
+img {
+	height: auto;
+	width: 100%;
+	object-fit: contain;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	width: 100%;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
