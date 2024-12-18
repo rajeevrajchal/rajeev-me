@@ -1,20 +1,16 @@
 <script lang="ts">
-	import DebugGrid from '@comp/debug-grid.svelte';
-	import Navbar from '@comp/navbar.svelte';
+	import DebugGrid from '@comp/debug/debug-grid.svelte';
 	import '@style/global.scss';
 	const { children } = $props();
 </script>
 
-<div class="main">
-	<Navbar />
-	{@render children()}
-</div>
+{@render children()}
 <DebugGrid />
 
 <style lang="scss">
 	.main {
 		position: relative;
-		width: 100vw;
-		min-height: 100vh;
+		width: 100svw;
+		min-height: 100svh;
 	}
 </style>
