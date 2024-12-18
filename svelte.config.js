@@ -7,10 +7,9 @@ const config = {
 	// for more information about preprocessors
 	preprocess: vitePreprocess({
 		scss: {
-			prependData: `@import 'src/style/main.scss';` // Ensure this path is correct
+			prependData: `@import 'src/style/global.scss';`
 		}
 	}),
-
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
@@ -19,13 +18,14 @@ const config = {
 		alias: {
 			'@style': './src/style/*',
 			'@comp': './src/lib/components/*',
-			'@constants': './src/lib/constants/*',
+			'@atoms': './src/lib/atoms/*',
+			'@assets': './src/lib/assets/*',
 			'@tools': './src/lib/tools/*',
-      '@types': './src/lib/types/*',
-      '@atoms': './src/lib/atoms/*',
-      '@components':'./src/lib/components/*',
-      '@actions': './src/lib/actions/*',
-      '@model': './src/lib/model/*'
+			'@theme': './src/lib/tools/style/*',
+			'@query': './src/lib/queries/*',
+			'@const': './src/lib/constants/*',
+			'@queries': './src/lib/queries/*',
+			'@icon': './src/lib/icons/*'
 		}
 	}
 };
