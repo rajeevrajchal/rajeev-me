@@ -2,12 +2,11 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { objectToCssVariables } from './src/lib/tools/style/object-to-css';
 import { variables } from './src/lib/tools/style/variables';
 import { defineConfig } from 'vite';
+import { objectToCssVariables } from './src/lib/tools/style/object-to-css';
+import { variables } from './src/lib/tools/style/variables';
 
 export default defineConfig({
 	plugins: [sveltekit()],
-	server: {
-		port: 5175
-	},
 	css: {
 		preprocessorOptions: {
 			scss: {
