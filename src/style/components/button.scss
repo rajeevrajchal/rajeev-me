@@ -1,0 +1,50 @@
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+	font: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	text-align: inherit;
+
+	&[disabled] {
+		cursor: default;
+	}
+}
+
+input[type='submit'] {
+	cursor: pointer;
+
+	&[disabled] {
+		cursor: default;
+	}
+}
+
+.button_rect {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	text-transform: uppercase;
+	&[disabled],
+	&[aria-disabled='true'] {
+		opacity: 0.5;
+		cursor: default;
+	}
+
+	&[aria-disabled='true'] {
+		pointer-events: none;
+	}
+}
+
+.button\:outline-dark {
+	@extend .button_rect;
+}
+
+.button\:circle {
+	@extend .button_rect;
+}
