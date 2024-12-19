@@ -18,6 +18,7 @@
 		.content {
 			background: #1d2028;
 			height: 100%;
+			padding: $padding-md $padding-lg;
 		}
 	}
 </style>
