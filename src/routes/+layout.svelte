@@ -1,17 +1,13 @@
 <script lang="ts">
-	import DebugGrid from '@comp/debug/debug-grid.svelte';
-	import { dev } from '$app/environment';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import '@styles/reset.css';
+	import '@styles/global.css';
+	import type { Snippet } from 'svelte';
 
-	injectAnalytics({ mode: dev ? 'development' : 'production' });
-
-	import '@style/global.scss';
-
-	const { children } = $props();
+	let {
+		children
+	}: {
+		children: Snippet;
+	} = $props();
 </script>
 
 {@render children()}
-
-{#if dev}
-	<DebugGrid />
-{/if}
