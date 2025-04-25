@@ -1,0 +1,5 @@
+*,
+*::after,
+*::before {
+	font-family: env(--font-root);
+}

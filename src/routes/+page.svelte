@@ -1,1 +1,4 @@
-<p>I am Rajeev Rajchal. The Frontend Developer</p>
+<section>
+	<img src="" alt="" />
+	<div>Hi</div>
+</section>
