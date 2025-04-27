@@ -2,6 +2,7 @@ import { Palette } from './palette';
 
 export const Variables = {
 	color: {
+		background: Palette.black,
 		foreground: Palette.black,
 
 		white: Palette.white,

@@ -3,3 +3,11 @@
 *::before {
 	font-family: env(--font-root);
 }
+
+:root {
+	font-family: env(--font-root);
+	line-height: 1.5;
+
+	background: env(--color-background);
+	color: env(--color-white);
+}
