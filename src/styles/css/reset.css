@@ -100,3 +100,16 @@ picture {
 :target {
 	scroll-margin-block: 5ex;
 }
+
+ul {
+	list-style: none;
+	text-decoration: none;
+}
+
+li {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}

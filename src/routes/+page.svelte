@@ -1,4 +1,8 @@
+<script lang="ts">
+	import AppBar from '@shared/components/navigation/app-bar.svelte';
+</script>
+
 <section>
-	<img src="" alt="" />
-	<div>Hi</div>
+	<AppBar />
+	<p>Hi</p>
 </section>
