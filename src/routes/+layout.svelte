@@ -2,7 +2,7 @@
 	import '@styles/css/reset.css';
 	import '@styles/css/global.css';
 	import type { Snippet } from 'svelte';
-	import { Layout } from '@shared';
+	import { AppBar, Layout } from '@shared';
 	import { Variables } from '@styles/variables';
 
 	let {
@@ -10,7 +10,7 @@
 	}: {
 		children: Snippet;
 	} = $props();
-	let showGrid: boolean = $state(true);
+	let showGrid: boolean = $state(false);
 
 	const layouts = [
 		{
@@ -44,11 +44,14 @@
 	{#if showGrid}
 		<Layout {layouts} />
 	{/if}
+	<AppBar />
 	{@render children()}
 </main>
 
 <style>
 	main {
 		position: relative;
+		width: 100vw;
+		background: blue;
 	}
 </style>

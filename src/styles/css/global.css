@@ -1,13 +1,28 @@
-*,
-*::after,
-*::before {
-	font-family: env(--font-root);
-}
-
 :root {
 	font-family: env(--font-root);
-	line-height: 1.5;
 
+	--layout-columns: env(--layout-mobile-columns);
+	--layout-gap: env(--layout-mobile-gap);
+	--layout-padding: env(--layout-mobile-padding);
+
+	@media (--large) {
+		--layout-columns: env(--layout-tablet-columns);
+		--layout-gap: env(--layout-tablet-gap);
+		--layout-padding: env(--layout-tablet-padding);
+	}
+
+	@media (--xlarge) {
+		--layout-columns: env(--layout-desktop-columns);
+		--layout-gap: env(--layout-desktop-gap);
+		--layout-padding: env(--layout-desktop-padding);
+	}
+}
+
+html {
 	background: env(--color-background);
 	color: env(--color-white);
+}
+
+body {
+	font-family: env(--font-body);
 }

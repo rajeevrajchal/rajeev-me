@@ -8,6 +8,20 @@
 </nav>
 
 <style>
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+
+		padding-inline: calc(var(--layout-padding) * 1px);
+		background: green;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	ul {
 		display: flex;
 		align-items: center;
