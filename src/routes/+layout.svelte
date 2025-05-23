@@ -10,7 +10,7 @@
 	}: {
 		children: Snippet;
 	} = $props();
-	let showGrid: boolean = $state(false);
+	let showGrid: boolean = $state(true);
 
 	const layouts = [
 		{
@@ -52,6 +52,8 @@
 	main {
 		position: relative;
 		width: 100vw;
-		background: blue;
+		min-height: 100svh;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 </style>
