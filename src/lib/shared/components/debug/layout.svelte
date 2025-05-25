@@ -52,7 +52,7 @@
 		display: flex;
 		top: 0;
 		left: 0;
-		height: 10000px;
+		height: 100vh;
 		width: 100%;
 		z-index: 100;
 		pointer-events: none;

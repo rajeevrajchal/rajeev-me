@@ -2,8 +2,9 @@
 	import '@styles/css/reset.css';
 	import '@styles/css/global.css';
 	import type { Snippet } from 'svelte';
-	import { Layout } from '@shared';
 	import { Variables } from '@styles/variables';
+	import { LayoutGrid } from '@shared/components/debug';
+	import Appbar from '@shared/components/navigation/appbar.svelte';
 
 	let {
 		children
@@ -42,13 +43,16 @@
 
 <main>
 	{#if showGrid}
-		<Layout {layouts} />
+		<LayoutGrid {layouts} />
 	{/if}
+	<Appbar />
 	{@render children()}
 </main>
 
 <style>
 	main {
 		position: relative;
+		height: 100svh;
+		width: 100svw;
 	}
 </style>
