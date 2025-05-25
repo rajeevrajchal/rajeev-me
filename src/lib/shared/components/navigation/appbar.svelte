@@ -1,6 +1,6 @@
 <div class="default-grid">
 	<nav>
-		<p>rajeev rajchala/p></p>
+		<p>rajeev rajchala</p>
 		<p>Software</p>
 	</nav>
 </div>

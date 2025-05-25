@@ -1,15 +1,5 @@
-*,
-*::after,
-*::before {
-	font-family: env(--font-root);
-}
-
 :root {
 	font-family: env(--font-root);
-	line-height: 1.5;
-
-	/* background: env(--color-background); */
-	/* color: env(--color-white); */
 
 	--layout-columns: env(--layout-mobile-columns);
 	--layout-gap: env(--layout-mobile-gap);
@@ -38,4 +28,13 @@
 	grid-template-columns: var(--columns);
 	padding-inline: var(--padding);
 	gap: var(--gap);
+}
+
+html {
+	background: env(--color-background);
+	color: env(--color-white);
+}
+
+body {
+	font-family: env(--font-body);
 }

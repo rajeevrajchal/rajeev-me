@@ -6,8 +6,12 @@
   https://piccalil.li/blog/a-more-modern-css-reset/
 */
 
-* {
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -99,4 +103,17 @@ picture {
 
 :target {
 	scroll-margin-block: 5ex;
+}
+
+ul {
+	list-style: none;
+	text-decoration: none;
+}
+
+li {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
 }

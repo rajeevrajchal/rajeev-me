@@ -3,8 +3,7 @@
 	import '@styles/css/global.css';
 	import type { Snippet } from 'svelte';
 	import { Variables } from '@styles/variables';
-	import { LayoutGrid } from '@shared/components/debug';
-	import Appbar from '@shared/components/navigation/appbar.svelte';
+	import { Appbar, Layout } from '@shared';
 
 	let {
 		children
@@ -43,7 +42,7 @@
 
 <main>
 	{#if showGrid}
-		<LayoutGrid {layouts} />
+		<Layout {layouts} />
 	{/if}
 	<Appbar />
 	{@render children()}
@@ -52,7 +51,9 @@
 <style>
 	main {
 		position: relative;
-		height: 100svh;
 		width: 100svw;
+		min-height: 100svh;
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 </style>

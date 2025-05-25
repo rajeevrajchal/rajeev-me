@@ -65,10 +65,10 @@
 		height: 100%;
 		width: 100%;
 		margin: 0 auto;
-		background-color: rgba(222, 0, 0, 0.15);
+		background-color: rgba(255, 255, 255, 0.15);
 	}
 	.collumn {
-		background-color: rgba(222, 0, 0, 0.2);
+		background-color: rgba(255, 255, 255, 0.15);
 		height: 100%;
 	}
 </style>
