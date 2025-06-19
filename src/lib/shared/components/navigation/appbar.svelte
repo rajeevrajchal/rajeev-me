@@ -7,7 +7,7 @@
 
 <style>
 	nav {
-		grid-column: 3 / -3;
+		grid-column: 2 / -2;
 		background: blue;
 	}
 </style>

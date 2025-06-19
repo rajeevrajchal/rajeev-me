@@ -43,6 +43,7 @@
 		"lightningcss-plugin-env-whitespace-fix": "^0.0.2",
 		"lightningcss-plugin-inline-svg": "^0.0.2",
 		"lucide-svelte": "^0.487.0",
-		"path": "^0.12.7"
+		"path": "^0.12.7",
+		"svelte-tweakpane-ui": "^1.5.8"
 	}
 }

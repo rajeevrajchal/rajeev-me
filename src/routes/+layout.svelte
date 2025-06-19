@@ -1,59 +1,18 @@
 <script lang="ts">
 	import '@styles/css/reset.css';
 	import '@styles/css/global.css';
-	import type { Snippet } from 'svelte';
-	import { Variables } from '@styles/variables';
-	import { Appbar, Layout } from '@shared';
+	import { type Snippet } from 'svelte';
+	import { Appbar, Debug, DocumentHead } from '@shared/components';
 
 	let {
 		children
 	}: {
 		children: Snippet;
 	} = $props();
-	let showGrid: boolean = $state(true);
-
-	const layouts = [
-		{
-			breakpoint: 0,
-			settings: {
-				length: Variables.layout['mobile-columns'],
-				gap: Variables.layout['mobile-gap'],
-				sidePadding: Variables.layout['mobile-padding']
-			}
-		},
-		{
-			breakpoint: 760,
-			settings: {
-				length: Variables.layout['tablet-columns'],
-				gap: Variables.layout['tablet-gap'],
-				sidePadding: Variables.layout['tablet-padding']
-			}
-		},
-		{
-			breakpoint: 1080,
-			settings: {
-				length: Variables.layout['desktop-columns'],
-				gap: Variables.layout['desktop-gap'],
-				sidePadding: Variables.layout['desktop-padding']
-			}
-		}
-	];
 </script>
 
-<main>
-	{#if showGrid}
-		<Layout {layouts} />
-	{/if}
-	<Appbar />
-	{@render children()}
-</main>
+<Debug />
+<DocumentHead />
 
-<style>
-	main {
-		position: relative;
-		width: 100svw;
-		min-height: 100svh;
-		overflow-x: hidden;
-		overflow-y: auto;
-	}
-</style>
+<Appbar />
+{@render children()}
