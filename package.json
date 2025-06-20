@@ -39,6 +39,7 @@
 	},
 	"dependencies": {
 		"browserslist": "^4.24.4",
+		"gsap": "^3.13.0",
 		"lightningcss-plugin-color-functions": "^0.0.2",
 		"lightningcss-plugin-env-whitespace-fix": "^0.0.2",
 		"lightningcss-plugin-inline-svg": "^0.0.2",

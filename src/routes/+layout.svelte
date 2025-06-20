@@ -2,7 +2,7 @@
 	import '@styles/css/reset.css';
 	import '@styles/css/global.css';
 	import { type Snippet } from 'svelte';
-	import { Appbar, Debug, DocumentHead } from '@shared/components';
+	import { Debug, DocumentHead } from '@shared/components';
 
 	let {
 		children
@@ -14,5 +14,4 @@
 <Debug />
 <DocumentHead />
 
-<Appbar />
 {@render children()}
