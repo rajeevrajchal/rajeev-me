@@ -4,7 +4,10 @@
 
 <main class="default-grid">
 	<div class="container">
-		<SplitText value="Rajeev Rajchal" />
+		<SplitText value="Rajeev Rajchal" size="large" direction="x" />
+		<div class="content">
+			<SplitText class="subtitle" value="Software Developer" delay={1.2} direction="x" />
+		</div>
 	</div>
 </main>
 
@@ -17,12 +20,22 @@
 
 	.container {
 		grid-column: 3 / -3;
+		width: 100%;
+
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+	}
+
+	.content {
 		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		position: relative;
+
+		:global(.subtitle) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
 	}
 </style>

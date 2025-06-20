@@ -18,10 +18,10 @@ export const Variables = {
 		1: '0.75em' // 12px
 	},
 	gap: {
-		1: '1.0625', //17px
-		2: '1.25em', //20px
-		3: '2em', //23.76px
-		4: '3.1025em',
+		small: '0.25em', // 4px
+		medium: '0.5em', // 8px
+		large: '1em', // 16px
+		xlarge: '2em', // 32px
 		container: '1.25em'
 	},
 	animation: {

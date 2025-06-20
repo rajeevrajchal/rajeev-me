@@ -1,11 +1,19 @@
 <script lang="ts">
-	import gsap from 'gsap';
+	import gsap, { Expo } from 'gsap';
 	import { SplitText } from 'gsap/SplitText';
 
 	let {
-		value
+		value,
+		size = 'default',
+		delay = 0,
+		direction = 'y',
+		class: className = ''
 	}: {
 		value: string;
+		class?: string;
+		size?: 'large' | 'default';
+		delay?: number;
+		direction?: 'x' | 'y';
 	} = $props();
 
 	let text: HTMLElement | undefined = $state();
@@ -15,10 +23,11 @@
 		if (!text) return;
 		split = SplitText.create(text, {
 			type: 'chars',
+			mask: 'chars',
 			autoSplit: true,
 			onSplit: (self) => {
 				return gsap.from(self.lines, {
-					y: 100,
+					[direction]: 100,
 					opacity: 0,
 					stagger: 0.05
 				});
@@ -29,18 +38,25 @@
 	$effect(() => {
 		if (!split) return;
 		gsap.from(split.chars.reverse(), {
-			duration: 2,
-			y: -100,
+			duration: 1.6,
+			[direction]: -100,
 			autoAlpha: 0,
-			stagger: 0.1
+			stagger: 0.1,
+			ease: Expo.easeOut,
+			delay: delay
 		});
 	});
 </script>
 
-<p bind:this={text}>{value}</p>
+<div bind:this={text} class={['split-text', size, className]}>{value}</div>
 
 <style>
-	p {
+	.large {
 		font-size: calc(env(--size-large) * 2);
+		margin-inline-start: -0.06em;
+	}
+
+	.default {
+		font-size: calc(env(--size-medium));
 	}
 </style>
