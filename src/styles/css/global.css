@@ -1,0 +1,40 @@
+:root {
+	font-family: env(--font-root);
+
+	--layout-columns: env(--layout-mobile-columns);
+	--layout-gap: env(--layout-mobile-gap);
+	--layout-padding: env(--layout-mobile-padding);
+
+	@media (--large) {
+		--layout-columns: env(--layout-tablet-columns);
+		--layout-gap: env(--layout-tablet-gap);
+		--layout-padding: env(--layout-tablet-padding);
+	}
+
+	@media (--xlarge) {
+		--layout-columns: env(--layout-desktop-columns);
+		--layout-gap: env(--layout-desktop-gap);
+		--layout-padding: env(--layout-desktop-padding);
+	}
+}
+
+.default-grid {
+	--padding: calc(var(--layout-padding) * 1px);
+	--gap: calc(var(--layout-gap) * 1px);
+	--columns: repeat(var(--layout-columns), 1fr);
+
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: var(--columns);
+	padding-inline: var(--padding);
+	gap: var(--gap);
+}
+
+html {
+	background: env(--color-background);
+	color: env(--color-white);
+}
+
+body {
+	font-family: env(--font-body);
+}

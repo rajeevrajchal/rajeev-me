@@ -7,6 +7,8 @@ import { envWhitespaceFix } from 'lightningcss-plugin-env-whitespace-fix';
 
 import { defineConfig } from 'vite';
 
+import { variablesVisitor } from './src/styles/lighting-css';
+
 export default defineConfig({
 	css: {
 		transformer: 'lightningcss',
@@ -17,7 +19,7 @@ export default defineConfig({
 			drafts: {
 				customMedia: true
 			},
-			visitor: composeVisitors([colorFunctionsVisitor, envWhitespaceFix])
+			visitor: composeVisitors([variablesVisitor, colorFunctionsVisitor, envWhitespaceFix])
 		}
 	},
 	build: {
