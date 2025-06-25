@@ -26,6 +26,9 @@
 			mask: 'chars',
 			autoSplit: true,
 			onSplit: (self) => {
+				if (self.lines.length === 0) {
+					return;
+				}
 				return gsap.from(self.lines, {
 					[direction]: 100,
 					opacity: 0,
