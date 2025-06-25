@@ -55,8 +55,12 @@
 
 <style>
 	.large {
-		font-size: calc(env(--size-large) * 2);
 		margin-inline-start: -0.06em;
+		font-size: env(--size-large);
+
+		@media (--large) {
+			font-size: calc(env(--size-large) * 2);
+		}
 	}
 
 	.default {

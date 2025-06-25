@@ -19,12 +19,17 @@
 	}
 
 	.container {
-		grid-column: 3 / -3;
+		grid-column: 1/-1;
+
+		@media (--large) {
+			grid-column: 3 / -3;
+		}
 		width: 100%;
 
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		padding-inline: env(--gap-2);
 	}
 
 	.content {

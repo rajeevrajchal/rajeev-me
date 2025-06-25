@@ -18,11 +18,10 @@ export const Variables = {
 		1: '0.75em' // 12px
 	},
 	gap: {
-		small: '0.25em', // 4px
-		medium: '0.5em', // 8px
-		large: '1em', // 16px
-		xlarge: '2em', // 32px
-		container: '1.25em'
+		'1': '.5rem', // 8px
+		'2': '.688rem', // 11px
+		'3': '1.375rem', // 22px
+		'4': '2.25rem' // 36px
 	},
 	animation: {
 		'scrollhint-speed': '3s'
