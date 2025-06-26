@@ -26,6 +26,9 @@
 			mask: 'chars',
 			autoSplit: true,
 			onSplit: (self) => {
+				if (self.lines.length === 0) {
+					return;
+				}
 				return gsap.from(self.lines, {
 					[direction]: 100,
 					opacity: 0,
@@ -52,8 +55,12 @@
 
 <style>
 	.large {
-		font-size: calc(env(--size-large) * 2);
 		margin-inline-start: -0.06em;
+		font-size: env(--size-large);
+
+		@media (--large) {
+			font-size: calc(env(--size-large) * 2);
+		}
 	}
 
 	.default {
