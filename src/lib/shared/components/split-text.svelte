@@ -1,63 +1,119 @@
 <script lang="ts">
-	import gsap, { Expo } from 'gsap';
-	import { SplitText } from 'gsap/SplitText';
+	import { animate, stagger } from 'animejs';
 
 	let {
 		value,
 		size = 'default',
-		delay = 0,
 		direction = 'y',
-		class: className = ''
+		splitBy = 'letters',
+		class: className = '',
+		delay = 0
 	}: {
 		value: string;
 		class?: string;
 		size?: 'large' | 'default';
-		delay?: number;
 		direction?: 'x' | 'y';
+		splitBy?: 'letters' | 'words' | 'lines';
+		delay?: number;
 	} = $props();
 
 	let text: HTMLElement | undefined = $state();
-	let split: SplitText | undefined = $state();
+
+	// Split by letters
+	function splitIntoLetters(element: HTMLElement, textValue: string) {
+		element.innerHTML = '';
+		textValue.split('').forEach((char) => {
+			const span = document.createElement('span');
+			span.className = 'letter';
+			span.textContent = char === ' ' ? '\u00A0' : char;
+			span.style.display = 'inline-block';
+			element.appendChild(span);
+		});
+		return element.querySelectorAll('.letter');
+	}
+
+	// Split text by words
+	function splitIntoWords(element: HTMLElement, textValue: string) {
+		element.innerHTML = '';
+		textValue.split(' ').forEach((word, index) => {
+			const span = document.createElement('span');
+			span.className = 'word';
+			span.textContent = word;
+			span.style.display = 'inline-block';
+			if (index < textValue.split(' ').length - 1) {
+				span.style.marginRight = '0.25em';
+			}
+			element.appendChild(span);
+		});
+		return element.querySelectorAll('.word');
+	}
+
+	// Split text by lines
+	function splitIntoLines(element: HTMLElement, textValue: string) {
+		element.innerHTML = '';
+		textValue.split('\n').forEach((line) => {
+			const div = document.createElement('div');
+			div.className = 'line';
+			div.textContent = line;
+			div.style.display = 'block';
+			element.appendChild(div);
+		});
+		return element.querySelectorAll('.line');
+	}
 
 	$effect(() => {
-		if (!text) return;
-		split = SplitText.create(text, {
-			type: 'chars',
-			mask: 'chars',
-			autoSplit: true,
-			onSplit: (self) => {
-				if (self.lines.length === 0) {
-					return;
-				}
-				return gsap.from(self.lines, {
-					[direction]: 100,
-					opacity: 0,
-					stagger: 0.05
-				});
+		if (!text || !value) return;
+		let elements: NodeListOf<Element>;
+		switch (splitBy) {
+			case 'letters':
+				elements = splitIntoLetters(text, value);
+				break;
+			case 'words':
+				elements = splitIntoWords(text, value);
+				break;
+			case 'lines':
+				elements = splitIntoLines(text, value);
+				break;
+			default:
+				elements = splitIntoLetters(text, value);
+		}
+
+		// Set initial state based on direction
+		elements.forEach((element) => {
+			const el = element as HTMLElement;
+			el.style.opacity = '0';
+
+			switch (direction) {
+				case 'x':
+					el.style.transform = 'translateX(-100%)';
+					break;
+				case 'y':
+					el.style.transform = 'translateY(100%)';
+					break;
 			}
 		});
-	});
 
-	$effect(() => {
-		if (!split) return;
-		gsap.from(split.chars.reverse(), {
-			duration: 1.6,
-			[direction]: -100,
-			autoAlpha: 0,
-			stagger: 0.1,
-			ease: Expo.easeOut,
-			delay: delay
+		// Animate elements
+		animate(elements, {
+			opacity: 1,
+			[direction]: 0,
+			duration: 800,
+			delay: stagger(50, { start: delay }),
+			easing: 'easeOutExpo'
 		});
 	});
 </script>
 
-<div bind:this={text} class={['split-text', size, className]}>{value}</div>
+<div bind:this={text} class={`split-text ${size} ${className}`}></div>
 
 <style>
+	.split-text {
+		overflow: hidden;
+	}
+
 	.large {
 		margin-inline-start: -0.06em;
 		font-size: env(--size-large);
-
 		@media (--large) {
 			font-size: calc(env(--size-large) * 2);
 		}

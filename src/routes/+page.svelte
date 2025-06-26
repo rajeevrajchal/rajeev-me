@@ -1,4 +1,6 @@
 <script lang="ts">
+	/** * Add a particle background or 3d background * */
+
 	import { SplitText } from '@shared/components';
 </script>
 
@@ -6,7 +8,7 @@
 	<div class="container">
 		<SplitText value="Rajeev Rajchal" size="large" direction="x" />
 		<div class="content">
-			<SplitText class="subtitle" value="Software Developer" delay={1.2} direction="x" />
+			<SplitText class="subtitle" value="Software Developer" direction="x" delay={1500} />
 		</div>
 	</div>
 </main>
@@ -24,12 +26,10 @@
 		@media (--large) {
 			grid-column: 3 / -3;
 		}
-		width: 100%;
 
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		padding-inline: env(--gap-2);
+		top: 45%;
+		transform: translateY(-45%);
 	}
 
 	.content {
