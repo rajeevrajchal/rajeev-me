@@ -2,9 +2,15 @@
 	/** * Add a particle background or 3d background * */
 
 	import { SplitText } from '@shared/components';
+
+	let main: HTMLElement | undefined = $state();
+
+	$effect(() => {
+		if (!main) return;
+	});
 </script>
 
-<main class="default-grid">
+<main class="default-grid" bind:this={main}>
 	<div class="container">
 		<SplitText value="Rajeev Rajchal" size="large" direction="x" />
 		<div class="content">
@@ -18,6 +24,7 @@
 		position: relative;
 		height: 100svh;
 		width: 100svw;
+		overflow: hidden;
 	}
 
 	.container {
