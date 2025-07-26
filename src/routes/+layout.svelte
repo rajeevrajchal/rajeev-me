@@ -14,4 +14,15 @@
 <Debug />
 <DocumentHead />
 
-{@render children()}
+<main>
+	{@render children()}
+</main>
+
+<style>
+	main {
+		position: relative;
+		height: 100dvh;
+		width: 100dvw;
+		overflow: hidden;
+	}
+</style>
