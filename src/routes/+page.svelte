@@ -3,6 +3,12 @@
 	 * Add a particle background or 3d background
 	 ***/
 	import { SplitText } from '@shared/components';
+
+	let main: HTMLElement | undefined = $state();
+
+	$effect(() => {
+		if (!main) return;
+	});
 </script>
 
 <div class="default-grid">
