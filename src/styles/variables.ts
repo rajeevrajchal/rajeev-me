@@ -29,9 +29,9 @@ export const Variables = {
 
 		interactive: {
 			link: Palette.darkBlue, // Default link color
-			linkHover: Palette.mediumBlue, // Link hover state
+			'link-hover': Palette.mediumBlue, // Link hover state
 			button: Palette.darkBlue, // Button background
-			buttonHover: Palette.mediumBlue // Button hover
+			'button-hover': Palette.mediumBlue // Button hover
 		}
 	},
 

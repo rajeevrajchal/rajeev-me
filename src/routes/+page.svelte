@@ -3,8 +3,8 @@
 	 * Add a particle background or 3d background
 	 ***/
 	import { SplitText } from '@shared/components';
-	import { Github, Linkedin } from 'lucide-svelte';
 	import { github, linkedin } from '@shared/constant/rajeev.json';
+	import { Linkedin, Github } from '@shared/icons';
 	import { animate, stagger } from 'animejs';
 
 	let elements: HTMLElement[] = $state([]);
@@ -33,7 +33,9 @@
 	<SplitText value="Rajeev Rajchal" size="large" direction="y" />
 	<SplitText value="Software Developer" direction="y" delay={500} />
 	<div class="socials" bind:this={elements[2]}>
-		<a class="icon" href={linkedin} target="_blanwk"><Linkedin /></a>
+		<a class="icon" href={linkedin} target="_blanwk">
+			<Linkedin />
+		</a>
 		<a class="icon" href={github} target="_blank"><Github /></a>
 	</div>
 </section>
@@ -74,11 +76,16 @@
 	}
 
 	.icon {
-		border: 1px solid env(--color-interactive-button);
-		border-radius: env(--radius-pill);
-		padding: env(--gap-1);
 		:global(svg) {
-			stroke: env(--color-interactive-button);
+			color: env(--color-interactive-button);
+			width: 1.5em;
+			height: 1.5em;
+		}
+
+		&:hover {
+			:global(svg) {
+				color: env(--color-interactive-button-hover);
+			}
 		}
 	}
 </style>
