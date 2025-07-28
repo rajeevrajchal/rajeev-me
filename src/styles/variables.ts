@@ -2,10 +2,37 @@ import { Palette } from './palette';
 
 export const Variables = {
 	color: {
-		background: Palette.black,
+		background: Palette.offWhite,
 
-		white: Palette.white,
-		black: Palette.black
+		white: Palette.offWhite,
+		black: Palette.deepBlack,
+
+		text: {
+			primary: Palette.deepBlack, // Headings (H1, H2)
+			body: Palette.darkBlue, // Main body text
+			secondary: Palette.mediumBlue, // Captions, metadata
+			muted: Palette.mediumBlue, // Less important text
+			inverse: Palette.offWhite // Text on dark backgrounds
+		},
+
+		accent: {
+			primary: Palette.darkBlue, // Main accent color
+			secondary: Palette.mediumBlue, // Secondary accent
+			highlight: Palette.lightMint // Hover states, highlights
+		},
+
+		border: {
+			light: Palette.lightMint, // Subtle borders
+			default: Palette.mediumBlue, // Standard borders
+			dark: Palette.darkBlue // Strong borders
+		},
+
+		interactive: {
+			link: Palette.darkBlue, // Default link color
+			linkHover: Palette.mediumBlue, // Link hover state
+			button: Palette.darkBlue, // Button background
+			buttonHover: Palette.mediumBlue // Button hover
+		}
 	},
 
 	aspect: {

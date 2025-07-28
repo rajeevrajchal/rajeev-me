@@ -32,7 +32,7 @@
 
 html {
 	background: env(--color-background);
-	color: env(--color-white);
+	color: env(--color-black);
 }
 
 body {

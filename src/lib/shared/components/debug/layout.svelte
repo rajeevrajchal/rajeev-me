@@ -69,7 +69,7 @@
 	}
 
 	.collumn {
-		background-color: hsla(from hsla(0, 0%, 100%, 1) h s l/0.4);
+		background-color: hsla(from env(--color-accent-secondary) h s l/0.4);
 		height: 100%;
 	}
 </style>

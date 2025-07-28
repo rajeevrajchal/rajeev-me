@@ -115,7 +115,7 @@
 		margin-inline-start: -0.06em;
 		font-size: env(--size-large);
 		@media (--large) {
-			font-size: calc(env(--size-large) * 2);
+			font-size: calc(env(--size-medium) * 3);
 		}
 	}
 

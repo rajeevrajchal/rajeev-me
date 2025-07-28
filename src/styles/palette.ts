@@ -1,7 +1,7 @@
 export const Palette = {
-	black: 'hsl(0, 0%, 4%)', // #0a0a0a
-	charcoal: 'hsl(0, 0%, 10%)', // #1a1a1a
-	gray: 'hsl(0, 0%, 53%)', // #888888
-	white: 'hsl(0, 0%, 100%)', //#ffffff
-	blue: 'hsl(217, 91%, 60%)' // #3b82f6
+	deepBlack: '#000000', // Pure black for text/accents
+	darkBlue: '#2f4550', // Dark blue-gray for headers/nav
+	mediumBlue: '#586f7c', // Mid-tone for borders/secondary elements
+	lightMint: '#b8dbd9', // Soft mint for highlights/hover states
+	offWhite: '#f4f4f9' // Off-white for main background
 };
