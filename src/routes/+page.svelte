@@ -31,7 +31,7 @@
 <section>
 	<img bind:this={elements[1]} class="profile" src="./images/rajeev.png" alt="Rajeev Rajchal" />
 	<SplitText value="Rajeev Rajchal" size="large" direction="y" />
-	<SplitText value="Software Developer" direction="y" delay={1000} />
+	<SplitText value="Software Developer" direction="y" delay={500} />
 	<div class="socials" bind:this={elements[2]}>
 		<a class="icon" href={linkedin} target="_blanwk"><Linkedin /></a>
 		<a class="icon" href={github} target="_blank"><Github /></a>
