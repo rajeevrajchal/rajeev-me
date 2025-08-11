@@ -2,7 +2,8 @@
 	import '@styles/css/reset.css';
 	import '@styles/css/global.css';
 	import { type Snippet } from 'svelte';
-	import { Appbar, Debug, DocumentHead, Indicator } from '@shared/components';
+	import { Debug, DocumentHead } from '@shared/components';
+	import CustomScroll from '@shared/components/custom-scroll/custom-scroll.svelte';
 
 	let {
 		children
@@ -14,17 +15,6 @@
 <Debug />
 <DocumentHead />
 
-<main>
-	<Appbar />
+<CustomScroll>
 	{@render children()}
-	<Indicator />
-</main>
-
-<style>
-	main {
-		position: relative;
-		height: 100dvh;
-		width: 100dvw;
-		overflow: hidden;
-	}
-</style>
+</CustomScroll>

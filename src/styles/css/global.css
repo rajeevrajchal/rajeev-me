@@ -36,6 +36,5 @@ html {
 }
 
 body {
-	overflow: hidden;
 	font-family: env(--font-body);
 }

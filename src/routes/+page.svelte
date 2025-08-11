@@ -46,9 +46,8 @@
 		place-content: center;
 		justify-items: center;
 		gap: env(--gap-3);
-
-		height: 100vh;
-		width: 100vw;
+		width: 100%;
+		height: 100%;
 
 		:global(.split-text) {
 			text-align: center;
