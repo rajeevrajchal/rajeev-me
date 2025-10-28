@@ -37,4 +37,12 @@ html {
 
 body {
 	font-family: env(--font-body);
+	overflow-x: hidden;
+}
+
+.heading {
+	font-family: env(--font-heading);
+	font-weight: 700;
+	font-size: env(--size-medium);
+	letter-spacing: 0.1em;
 }

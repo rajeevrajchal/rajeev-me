@@ -1,11 +1,11 @@
 <div class="default-grid">
 	<nav>
 		<p>RR</p>
-		<div class="quick">
-			<a href="">Home</a>
-			<a href="">Work</a>
-			<a href="">Contact</a>
-		</div>
+		<!-- <div class="quick"> -->
+		<!-- 	<a href="">Home</a> -->
+		<!-- 	<a href="">Work</a> -->
+		<!-- 	<a href="">Contact</a> -->
+		<!-- </div> -->
 	</nav>
 </div>
 
@@ -16,7 +16,7 @@
 	}
 
 	nav {
-		grid-column: 2 / -2;
+		grid-column: 4 / -4;
 		padding-block: env(--gap-2);
 
 		display: grid;

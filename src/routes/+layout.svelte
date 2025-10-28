@@ -4,6 +4,7 @@
 	import { type Snippet } from 'svelte';
 	import { Debug, DocumentHead } from '@shared/components';
 	import CustomScroll from '@shared/components/custom-scroll/custom-scroll.svelte';
+	import Appbar from '@shared/components/navigation/appbar.svelte';
 
 	let {
 		children
@@ -15,6 +16,7 @@
 <Debug />
 <DocumentHead />
 
+<Appbar />
 <CustomScroll>
 	{@render children()}
 </CustomScroll>

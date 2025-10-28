@@ -1,90 +1,86 @@
-<script lang="ts">
-	/**
-	 * Add a particle background or 3d background
-	 ***/
-	import { SplitText } from '@shared/components';
-	import { github, linkedin } from '@shared/constant/rajeev.json';
-	import { Linkedin, Github } from '@shared/icons';
-	import { animate, stagger } from 'animejs';
-
-	let elements: HTMLElement[] = $state([]);
-
-	$effect(() => {
-		if (!elements) return;
-
-		animate(elements, {
-			opacity: {
-				from: 0,
-				to: 1
-			},
-			y: {
-				from: 50,
-				to: 0
-			},
-			duration: 800,
-			delay: stagger(50, { start: 100 }),
-			easing: 'easeOutExpo'
-		});
-	});
+<script>
+	import { ChevronDown, ChevronUp } from 'lucide-svelte';
 </script>
 
-<section>
-	<img bind:this={elements[1]} class="profile" src="./images/rajeev.png" alt="Rajeev Rajchal" />
-	<SplitText value="Rajeev Rajchal" size="large" direction="y" />
-	<SplitText value="Software Developer" direction="y" delay={500} />
-	<div class="socials" bind:this={elements[2]}>
-		<a class="icon" href={linkedin} target="_blanwk">
-			<Linkedin />
-		</a>
-		<a class="icon" href={github} target="_blank"><Github /></a>
+<section class="default-grid">
+	<p class="heading">Expeience</p>
+	<div class="container">
+		<div class="expeience">
+			<div class="expeience-item">
+				<p class="company">
+					<span>Google</span>
+					<span>Current</span>
+				</p>
+				<p class="poition">Senior Software Developer</p>
+				<ul class="role">
+					<li>Head of department</li>
+					<li>Head of deparemtn</li>
+				</ul>
+			</div>
+		</div>
+		<div class="action">
+			<button class="btn arrow-up"><ChevronUp /></button>
+			<button class="btn arrow-down"><ChevronDown /></button>
+		</div>
 	</div>
 </section>
 
 <style>
-	section {
-		display: grid;
-		place-content: center;
-		justify-items: center;
-		gap: env(--gap-3);
-		width: 100%;
-		height: 100%;
-
-		:global(.split-text) {
-			text-align: center;
-			align-self: center;
-		}
-	}
-
-	img {
-		border-radius: 50%;
-		width: 8em;
-		height: 8em;
-		object-fit: cover;
-		align-self: center;
-		box-shadow: 0 8px 32px rgba(47, 69, 80, 0.2);
-		border: 4px solid #b8dbd9;
-		opacity: 0;
-	}
-
-	.socials {
-		display: flex;
+	.default-grid {
 		align-items: center;
-		justify-content: center;
-		gap: calc(env(--gap-2) * 2);
-		opacity: 0;
+		height: 100%;
 	}
 
-	.icon {
-		:global(svg) {
-			color: env(--color-interactive-button);
-			width: 1.5em;
-			height: 1.5em;
-		}
+	.heading {
+		grid-column: 4 / -4;
+		align-self: flex-end;
+	}
 
-		&:hover {
-			:global(svg) {
-				color: env(--color-interactive-button-hover);
-			}
-		}
+	.container {
+		height: auto;
+		min-height: 12em;
+		grid-column: 4 / -4;
+		align-self: flex-start;
+
+		position: relative;
+	}
+
+	.expeience-item {
+		padding-block: env(--gap-3);
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		grid-auto-flow: row;
+		column-gap: calc(env(--gap-4) * 2);
+		row-gap: env(--gap-3);
+
+		grid-template-areas:
+			'company position'
+			'company role';
+	}
+
+	.company {
+		grid-area: company;
+	}
+
+	.position {
+		grid-area: position;
+	}
+
+	.role {
+		grid-area: role;
+	}
+
+	.status {
+		grid-area: status;
+	}
+
+	.action {
+		position: absolute;
+		right: -5em;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-between;
 	}
 </style>

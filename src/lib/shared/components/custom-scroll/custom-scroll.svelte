@@ -39,6 +39,7 @@
 		width: 100vw;
 		height: 200vh;
 		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 
 	.content {
